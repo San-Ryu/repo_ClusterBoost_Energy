@@ -1,0 +1,13 @@
+{
+  "ELEC_1-8-4": {
+    "colsample_bytree": 0.749816047538945,
+    "learning_rate": 0.14285357442943783,
+    "max_depth": 7,
+    "min_child_samples": 81,
+    "n_estimators": 900,
+    "num_leaves": 40,
+    "reg_alpha": 0.07800932022121826,
+    "reg_lambda": 0.07799726016810132,
+    "subsample": 0.6232334448672797
+  }
+}

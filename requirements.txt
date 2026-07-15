@@ -27,6 +27,10 @@ tensorflow
 tensorflow-addons
 keras-flops
 
+# --- Parquet I/O ---
+pyarrow
+fastparquet
+
 # --- Deep Learning: PyTorch ---
 torch
 pytorch-lightning

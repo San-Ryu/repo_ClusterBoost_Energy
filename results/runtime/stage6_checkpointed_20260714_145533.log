@@ -1,0 +1,53 @@
+[STAGE6] start=2026-07-14 14:55:33
+[STAGE6] step=finalize models=catboost,decisiontree,lightgbm,randomforest,xgboost
+[STAGE6] n_households=1 n_iter=2 cv_splits=2
+[STAGE6] max_households_per_run=1 max_trials_per_run=1
+[STAGE6] target_mode=delta scoring=r2
+[STAGE6] leakage_check=1
+[STAGE6] log_file=results/runtime/stage6_checkpointed_20260714_145533.log
+============================================================
+[STAGE6] Running CatBoost at 2026-07-14 14:55:33
+============================================================
+[PLAN] CatBoost: total=1 done=1 pending_households=0 trial_checkpoint_dir=results/smoke_models/checkpoints/catboost
+  plan: results/smoke_models/ml_catboost_checkpoint_plan.csv
+[DONE] model=CatBoost
+  detail : results/smoke_models/ml_catboost_detail.csv
+  summary: results/smoke_models/ml_catboost_summary.csv
+  params : results/smoke_models/ml_catboost_best_params.json
+============================================================
+[STAGE6] Running DecisionTree at 2026-07-14 14:55:36
+============================================================
+[PLAN] DecisionTree: total=1 done=1 pending_households=0 trial_checkpoint_dir=results/smoke_models/checkpoints/decisiontree
+  plan: results/smoke_models/ml_decisiontree_checkpoint_plan.csv
+[DONE] model=DecisionTree
+  detail : results/smoke_models/ml_decisiontree_detail.csv
+  summary: results/smoke_models/ml_decisiontree_summary.csv
+  params : results/smoke_models/ml_decisiontree_best_params.json
+============================================================
+[STAGE6] Running LightGBM at 2026-07-14 14:55:39
+============================================================
+[PLAN] LightGBM: total=1 done=1 pending_households=0 trial_checkpoint_dir=results/smoke_models/checkpoints/lightgbm
+  plan: results/smoke_models/ml_lightgbm_checkpoint_plan.csv
+[DONE] model=LightGBM
+  detail : results/smoke_models/ml_lightgbm_detail.csv
+  summary: results/smoke_models/ml_lightgbm_summary.csv
+  params : results/smoke_models/ml_lightgbm_best_params.json
+============================================================
+[STAGE6] Running RandomForest at 2026-07-14 14:55:41
+============================================================
+[PLAN] RandomForest: total=1 done=1 pending_households=0 trial_checkpoint_dir=results/smoke_models/checkpoints/randomforest
+  plan: results/smoke_models/ml_randomforest_checkpoint_plan.csv
+[DONE] model=RandomForest
+  detail : results/smoke_models/ml_randomforest_detail.csv
+  summary: results/smoke_models/ml_randomforest_summary.csv
+  params : results/smoke_models/ml_randomforest_best_params.json
+============================================================
+[STAGE6] Running XGBoost at 2026-07-14 14:55:44
+============================================================
+[PLAN] XGBoost: total=1 done=1 pending_households=0 trial_checkpoint_dir=results/smoke_models/checkpoints/xgboost
+  plan: results/smoke_models/ml_xgboost_checkpoint_plan.csv
+[DONE] model=XGBoost
+  detail : results/smoke_models/ml_xgboost_detail.csv
+  summary: results/smoke_models/ml_xgboost_summary.csv
+  params : results/smoke_models/ml_xgboost_best_params.json
+[STAGE6] end=2026-07-14 14:55:47 status=success

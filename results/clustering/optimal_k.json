@@ -1,0 +1,62 @@
+{
+  "10MIN": {
+    "optimal_k": 2,
+    "k_elbow": 6,
+    "k_sil": 2,
+    "k_ch": 2,
+    "k_dunn": 2,
+    "k_dbi": 2,
+    "votes": {
+      "6": 1,
+      "2": 4
+    }
+  },
+  "1H": {
+    "optimal_k": 2,
+    "k_elbow": 6,
+    "k_sil": 2,
+    "k_ch": 2,
+    "k_dunn": 2,
+    "k_dbi": 2,
+    "votes": {
+      "6": 1,
+      "2": 4
+    }
+  },
+  "1D": {
+    "optimal_k": 2,
+    "k_elbow": 5,
+    "k_sil": 2,
+    "k_ch": 2,
+    "k_dunn": 2,
+    "k_dbi": 2,
+    "votes": {
+      "5": 1,
+      "2": 4
+    }
+  },
+  "1W": {
+    "optimal_k": 2,
+    "k_elbow": 5,
+    "k_sil": 2,
+    "k_ch": 2,
+    "k_dunn": 2,
+    "k_dbi": 2,
+    "votes": {
+      "5": 1,
+      "2": 4
+    }
+  },
+  "1M": {
+    "optimal_k": 2,
+    "k_elbow": 5,
+    "k_sil": 2,
+    "k_ch": 2,
+    "k_dunn": 2,
+    "k_dbi": 2,
+    "votes": {
+      "5": 1,
+      "2": 4
+    }
+  }
+}

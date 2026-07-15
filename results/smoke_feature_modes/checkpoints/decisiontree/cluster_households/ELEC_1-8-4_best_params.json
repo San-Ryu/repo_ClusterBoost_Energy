@@ -1,0 +1,12 @@
+{
+  "household": "ELEC_1-8-4",
+  "best_trial_index": 0,
+  "best_cv_score": -1.473252892309039,
+  "best_params": {
+    "max_depth": 10,
+    "max_features": 0.7,
+    "min_samples_leaf": 15,
+    "min_samples_split": 12
+  },
+  "updated_at": "2026-07-14T18:30:04"
+}

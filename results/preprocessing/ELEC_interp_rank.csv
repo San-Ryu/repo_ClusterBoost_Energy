@@ -1,0 +1,6 @@
+method,method_label,composite_score,rank
+stl,2안 (STL),-0.20877389260486887,1
+baseline,기존안 (대치+선형),-0.16200448023106004,2
+mstl,3안 (MSTL),-0.1379437679878016,3
+pchip,1안 (PCHIP),-0.12567972965140606,4
+seasonal_naive,4안 (Seasonal Naive),0.6344018704751374,5

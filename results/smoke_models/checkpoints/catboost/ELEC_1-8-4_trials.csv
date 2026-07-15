@@ -1,0 +1,3 @@
+model,household,trial_index,scoring,mean_test_score,std_test_score,fold_scores_json,params_json,elapsed_s,updated_at
+CatBoost,ELEC_1-8-4,0,r2,-3.8885643012447444,0.09036178645466819,"[-3.9789260876994126, -3.798202514790076]","{""bagging_temperature"": 0.3745401188473625, ""depth"": 8, ""iterations"": 570, ""l2_leaf_reg"": 3, ""learning_rate"": 0.1191567400381877, ""random_strength"": 1.193700315892974}",5.7,2026-07-14T15:15:06
+CatBoost,ELEC_1-8-4,1,r2,-7.853744631573986,0.4760438265373983,"[-8.329788458111384, -7.3777008050365875]","{""bagging_temperature"": 0.44583275285359114, ""depth"": 6, ""iterations"": 758, ""l2_leaf_reg"": 5, ""learning_rate"": 0.09415610164404924, ""random_strength"": 1.416145155592091}",4.1,2026-07-14T15:15:10

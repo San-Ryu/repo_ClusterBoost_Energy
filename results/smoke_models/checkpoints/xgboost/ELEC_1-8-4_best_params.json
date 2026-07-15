@@ -1,0 +1,16 @@
+{
+  "household": "ELEC_1-8-4",
+  "best_trial_index": 1,
+  "best_cv_score": -2.280369505663602,
+  "best_params": {
+    "colsample_bytree": 0.7836995567863468,
+    "learning_rate": 0.05671920555946306,
+    "max_depth": 5,
+    "min_child_weight": 6,
+    "n_estimators": 508,
+    "reg_alpha": 0.48495492608099716,
+    "reg_lambda": 1.7486639612006325,
+    "subsample": 0.6849356442713105
+  },
+  "updated_at": "2026-07-14T15:26:25"
+}

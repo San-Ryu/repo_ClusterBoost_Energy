@@ -4,6 +4,13 @@ __pycache__/
 catboost_info/
 *.tmp
 temp.csv
+.DS_Store
+.cursor/
+.jupyter/
+.venv*/
+
+# KIER 공유 데이터 루트는 프로젝트 밖 ~/data 에 둔다.
+data/
 
 # 저작권 보호 논문 PDF
 paper/A machine learning ensemble framework based on a clustering algorithm for improving electric power consumption performance.pdf
