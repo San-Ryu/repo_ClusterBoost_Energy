@@ -82,8 +82,8 @@ WS_TimeSerial_ClusterBoost_Energy/
 
 | 경로 | 내용 |
 |---|---|
-| `data/KMA_ASOS/` | 기상청 ASOS 시간별 관측값 CSV (기온·강수·풍속·습도 등) |
-| `data/KIER_Usage/` | KIER M02 프로젝트 세대별 10분 단위 에너지 사용량 원시 데이터 |
+| ~/data/KMA_ASOS/` | 기상청 ASOS 시간별 관측값 CSV (기온·강수·풍속·습도 등) |
+| ~/data/KIER_Usage/` | KIER M02 프로젝트 세대별 10분 단위 에너지 사용량 원시 데이터 |
 
 ---
 

@@ -1,0 +1,2 @@
+model,household,trial_index,scoring,mean_test_score,std_test_score,fold_scores_json,params_json,elapsed_s,updated_at
+DecisionTree,ELEC_1-8-4,0,r2,-1.473252892309039,1.2943218400329277,"[-2.767574732341967, -0.1789310522761116]","{""max_depth"": 10, ""max_features"": 0.7, ""min_samples_leaf"": 15, ""min_samples_split"": 12}",5.1,2026-07-14T18:30:00

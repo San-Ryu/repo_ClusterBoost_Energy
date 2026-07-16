@@ -1,0 +1,14 @@
+{
+  "household": "ELEC_1-8-4",
+  "best_trial_index": 0,
+  "best_cv_score": -3.888564301244744,
+  "best_params": {
+    "bagging_temperature": 0.3745401188473625,
+    "depth": 8,
+    "iterations": 570,
+    "l2_leaf_reg": 3,
+    "learning_rate": 0.1191567400381877,
+    "random_strength": 1.193700315892974
+  },
+  "updated_at": "2026-07-14T15:15:14"
+}

@@ -109,6 +109,39 @@ def build_1dcnn_seq2seq(input_shape, activation: str = "swish"):
 
 
 # =========================================================================== #
+#  Model Builders — GRU
+# =========================================================================== #
+
+def build_gru(n_features: int, seq_len: int,
+              units: list | None = None,
+              dropout_rate: float = 0.15,
+              activation: str = "tanh"):
+    """
+    KIER M02 — Stacked GRU 예측 모델.
+
+    Gated Recurrent Unit: LSTM 대비 파라미터 수 ~33% 적고 학습 속도 빠름.
+    마지막 GRU 층은 return_sequences=False → (batch, units[-1]) 직접 출력.
+    """
+    if units is None:
+        units = [256, 128, 64]
+
+    inp = tf.keras.layers.Input(shape=(seq_len, n_features))
+    x = inp
+    for i, u in enumerate(units):
+        return_seq = i < len(units) - 1
+        x = tf.keras.layers.GRU(
+            u, return_sequences=return_seq,
+            dropout=dropout_rate, activation=activation,
+        )(x)
+        if return_seq:
+            x = tf.keras.layers.LayerNormalization()(x)
+
+    x = tf.keras.layers.Dense(64, activation="relu")(x)
+    out = tf.keras.layers.Dense(1)(x)
+    return "GRU", tf.keras.models.Model(inp, out)
+
+
+# =========================================================================== #
 #  Model Builders — TCN
 # =========================================================================== #
 
