@@ -11,6 +11,7 @@ if [[ ! -f ".venv/bin/activate" ]]; then
   echo "[ERROR] .venv not found: ${ROOT_DIR}/.venv/bin/activate" >&2
   exit 2
 fi
+PYTHON_BIN="${PYTHON_BIN:-${ROOT_DIR}/.venv/bin/python}"
 
 RUNTIME_DIR="${RUNTIME_DIR:-results/runtime}"
 mkdir -p "${RUNTIME_DIR}"
@@ -72,9 +73,9 @@ model_arg() {
 
 run_python() {
   if [[ "${USE_CAFFEINATE}" == "1" ]] && command -v caffeinate >/dev/null 2>&1; then
-    caffeinate -dimsu python -u "$@"
+    caffeinate -dimsu "${PYTHON_BIN}" -u "$@"
   else
-    python -u "$@"
+    "${PYTHON_BIN}" -u "$@"
   fi
 }
 

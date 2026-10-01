@@ -1,0 +1,224 @@
+{
+  "created_from": "/Users/labq_s.h.ryu/repo_5Energy_Clustering",
+  "canonical_source_dir": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02",
+  "duplicate_checked_dir": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver",
+  "note": "KIRBS Ver comparison txt files have identical SHA-256 hashes for all copied ML comparison files.",
+  "metric_order": [
+    "MAE",
+    "MAPE",
+    "MSE",
+    "RMSE",
+    "MSLE",
+    "MBE",
+    "R2"
+  ],
+  "group_mapping": {
+    "대조군 : 군집화 X": {
+      "group_family": "control",
+      "group_type": "no_clustering",
+      "group_id": "ALL"
+    },
+    "실험군 01-01 : C0 군집의 합": {
+      "group_family": "experimental_1",
+      "group_type": "cluster_direct",
+      "group_id": "C0"
+    },
+    "실험군 01-02 : C1 군집의 합": {
+      "group_family": "experimental_1",
+      "group_type": "cluster_direct",
+      "group_id": "C1"
+    },
+    "실험군 01-03 : C2 군집의 합": {
+      "group_family": "experimental_1",
+      "group_type": "cluster_direct",
+      "group_id": "C2"
+    },
+    "실험군 02 : 모든 군집의 합": {
+      "group_family": "experimental_2",
+      "group_type": "sum_of_cluster_predictions",
+      "group_id": "SUM"
+    }
+  },
+  "files": [
+    {
+      "file": "ELEC_Comparison_CB_K2M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_CB_K2M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_CB_K2M.txt",
+      "sha256": "3a4f326ba7b9bfb88fa920f356f95522e6a538d0b17ccad6efdd6bc7bbca279c",
+      "duplicate_sha256": "3a4f326ba7b9bfb88fa920f356f95522e6a538d0b17ccad6efdd6bc7bbca279c",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_CB_K2W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_CB_K2W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_CB_K2W.txt",
+      "sha256": "d74865451c2321b5fe56ef17beaef4ef180b85a728797e8c3fedfe1df188af02",
+      "duplicate_sha256": "d74865451c2321b5fe56ef17beaef4ef180b85a728797e8c3fedfe1df188af02",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_CB_K3M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_CB_K3M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_CB_K3M.txt",
+      "sha256": "3485e72701b59229d1d7185d2d958e2bc1a75f06adda9a78ea6be0b5a1b87d3a",
+      "duplicate_sha256": "3485e72701b59229d1d7185d2d958e2bc1a75f06adda9a78ea6be0b5a1b87d3a",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_CB_K3W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_CB_K3W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_CB_K3W.txt",
+      "sha256": "4587ccdcc2530d43f9c417ea9d59d0aac02aed46c324ce1fc08e7d6885001dfd",
+      "duplicate_sha256": "4587ccdcc2530d43f9c417ea9d59d0aac02aed46c324ce1fc08e7d6885001dfd",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_DT_K2M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_DT_K2M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_DT_K2M.txt",
+      "sha256": "0d639add298c5b7aac12ef59b072b9735c2ae7bfb3f161cbf2a2a87ccd3db669",
+      "duplicate_sha256": "0d639add298c5b7aac12ef59b072b9735c2ae7bfb3f161cbf2a2a87ccd3db669",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_DT_K2W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_DT_K2W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_DT_K2W.txt",
+      "sha256": "f1dfb4ef41f2087684c4af7860a1a228aa943178858592a90ff1c9c521ee4a53",
+      "duplicate_sha256": "f1dfb4ef41f2087684c4af7860a1a228aa943178858592a90ff1c9c521ee4a53",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_DT_K3M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_DT_K3M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_DT_K3M.txt",
+      "sha256": "a644befd5288fd021f9e284cef697e4b179e517fb781f9f3cf2b30b8b809da14",
+      "duplicate_sha256": "a644befd5288fd021f9e284cef697e4b179e517fb781f9f3cf2b30b8b809da14",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_DT_K3W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_DT_K3W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_DT_K3W.txt",
+      "sha256": "6543ebd2d6ed6f6cf78e2292c823dc99ab7ccf47e98386bdef1e06f2fa4c549b",
+      "duplicate_sha256": "6543ebd2d6ed6f6cf78e2292c823dc99ab7ccf47e98386bdef1e06f2fa4c549b",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_LGBM_K2M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_LGBM_K2M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_LGBM_K2M.txt",
+      "sha256": "12a75c35f9675616fe434700dcc811edad3913d64fd0baf77285a7436635dba4",
+      "duplicate_sha256": "12a75c35f9675616fe434700dcc811edad3913d64fd0baf77285a7436635dba4",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_LGBM_K2W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_LGBM_K2W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_LGBM_K2W.txt",
+      "sha256": "221cf4b7de5801c10f4a237507f873817a63142de6327311f0c19d4ab91abe0b",
+      "duplicate_sha256": "221cf4b7de5801c10f4a237507f873817a63142de6327311f0c19d4ab91abe0b",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_LGBM_K3M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_LGBM_K3M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_LGBM_K3M.txt",
+      "sha256": "9a97d3d9402288e4c4c5dab047de052ece7f23458b187d4741707d3973d49ad1",
+      "duplicate_sha256": "9a97d3d9402288e4c4c5dab047de052ece7f23458b187d4741707d3973d49ad1",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_LGBM_K3W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_LGBM_K3W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_LGBM_K3W.txt",
+      "sha256": "6d2d7a91f1784f13a7c01f09ae834e9867a944ea77a56cfa2458acc91358942b",
+      "duplicate_sha256": "6d2d7a91f1784f13a7c01f09ae834e9867a944ea77a56cfa2458acc91358942b",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_RF_K2M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_RF_K2M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_RF_K2M.txt",
+      "sha256": "82f7d18c4b1dacac929a0e4698927d005c7b223a0b1a8e92aece22994b8035c0",
+      "duplicate_sha256": "82f7d18c4b1dacac929a0e4698927d005c7b223a0b1a8e92aece22994b8035c0",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_RF_K2W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_RF_K2W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_RF_K2W.txt",
+      "sha256": "3231536e500e75b2a8f22e2431423b00ba78798980d85b581b7b01f55b6ee2e9",
+      "duplicate_sha256": "3231536e500e75b2a8f22e2431423b00ba78798980d85b581b7b01f55b6ee2e9",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_RF_K3M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_RF_K3M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_RF_K3M.txt",
+      "sha256": "f720383614c66f1cae7ab7d3e84904909942612cb925296c1be14cb21aacc5ad",
+      "duplicate_sha256": "f720383614c66f1cae7ab7d3e84904909942612cb925296c1be14cb21aacc5ad",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_RF_K3W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_RF_K3W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_RF_K3W.txt",
+      "sha256": "01067a6e66ad0d2c6c66e27d24b18637fddd00d489fec866186d8e6624abe296",
+      "duplicate_sha256": "01067a6e66ad0d2c6c66e27d24b18637fddd00d489fec866186d8e6624abe296",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_XGB_K2M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_XGB_K2M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_XGB_K2M.txt",
+      "sha256": "fda60516523123202dbebbb757b3e4888bf38bb7423410b27b8459e61b43e289",
+      "duplicate_sha256": "fda60516523123202dbebbb757b3e4888bf38bb7423410b27b8459e61b43e289",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_XGB_K2W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_XGB_K2W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_XGB_K2W.txt",
+      "sha256": "64ecde7280d2b1772fd3ef5524077463f00ceffc4c0bfbc0c45af50a90b7eaba",
+      "duplicate_sha256": "64ecde7280d2b1772fd3ef5524077463f00ceffc4c0bfbc0c45af50a90b7eaba",
+      "duplicate_same": true,
+      "records_extracted": 4
+    },
+    {
+      "file": "ELEC_Comparison_XGB_K3M.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_XGB_K3M.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_XGB_K3M.txt",
+      "sha256": "63c2ec81b47d37c020ad7a306a4c20289bc8a68ee001389fa4008dc498cbf00e",
+      "duplicate_sha256": "63c2ec81b47d37c020ad7a306a4c20289bc8a68ee001389fa4008dc498cbf00e",
+      "duplicate_same": true,
+      "records_extracted": 5
+    },
+    {
+      "file": "ELEC_Comparison_XGB_K3W.txt",
+      "source_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02/ELEC_Comparison_XGB_K3W.txt",
+      "duplicate_path": "/Users/labq_s.h.ryu/repo_5Energy_Clustering/Src_Energy_M02_KIRBS Ver/ELEC_Comparison_XGB_K3W.txt",
+      "sha256": "24bfe771b72c6c4e059fe81488965e86f13654714c1b26286726d2f00403dd3c",
+      "duplicate_sha256": "24bfe771b72c6c4e059fe81488965e86f13654714c1b26286726d2f00403dd3c",
+      "duplicate_same": true,
+      "records_extracted": 5
+    }
+  ]
+}

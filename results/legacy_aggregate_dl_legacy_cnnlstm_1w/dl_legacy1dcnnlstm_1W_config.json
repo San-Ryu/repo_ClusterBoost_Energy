@@ -1,0 +1,31 @@
+{
+  "family": "dl",
+  "model": "Legacy1DCNNLSTM",
+  "interp_method": "seasonal_naive",
+  "resolution": "1W",
+  "cluster_algorithm": "kmeans",
+  "scope": "both",
+  "target_shift": 1,
+  "test_ratio": 0.3,
+  "cv_folds": 10,
+  "cv_shuffle": false,
+  "seed": 42,
+  "time_features": true,
+  "results_dir": "results/legacy_aggregate_dl_legacy_cnnlstm_1w",
+  "step": "run",
+  "seq_len": 3,
+  "val_ratio": 0.15,
+  "epochs": 200,
+  "batch_size": 128,
+  "patience": 20,
+  "lr": 0.001,
+  "dl_loss": "huber",
+  "fit_verbose": 2,
+  "dl_train_config": {
+    "epochs": 200,
+    "batch_size": 128,
+    "patience": 20,
+    "learning_rate": 0.001,
+    "loss": "huber"
+  }
+}

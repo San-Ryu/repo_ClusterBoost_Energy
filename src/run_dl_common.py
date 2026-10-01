@@ -8,14 +8,19 @@ from pathlib import Path
 def run_model(model_name: str) -> None:
     """
     Execute model_dl_single.py with a stable DL runtime context.
-    - Prefer .venv-dl python when present
+    - Prefer .venv-dl python when present and executable
+    - Fall back to .venv python when it carries the DL stack
     - Apply conservative thread/runtime env defaults
     """
     root = Path(__file__).resolve().parent.parent
-    venv_dl_python = root / ".venv-dl" / "bin" / "python"
-    if not venv_dl_python.exists():
+    candidates = [
+        root / ".venv-dl" / "bin" / "python",
+        root / ".venv" / "bin" / "python",
+    ]
+    python_bin_path = next((path for path in candidates if path.exists() and os.access(path, os.X_OK)), None)
+    if python_bin_path is None:
         print(
-            "[ERROR] .venv-dl not found. Create DL runtime first:\n"
+            "[ERROR] No runnable DL Python found. Create or repair a DL runtime first:\n"
             "  python3.10 -m venv .venv-dl\n"
             "  source .venv-dl/bin/activate\n"
             "  python -m pip install --upgrade pip\n"
@@ -25,7 +30,7 @@ def run_model(model_name: str) -> None:
         )
         sys.exit(2)
 
-    python_bin = str(venv_dl_python)
+    python_bin = str(python_bin_path)
 
     env = os.environ.copy()
     env.setdefault("MPLCONFIGDIR", str(root / ".mplconfig"))
@@ -41,4 +46,3 @@ def run_model(model_name: str) -> None:
         *sys.argv[1:],
     ]
     os.execvpe(python_bin, cmd, env)
-

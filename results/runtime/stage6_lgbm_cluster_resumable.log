@@ -1,0 +1,890 @@
+[LGBM-RESUME] start=2026-07-28 09:47:30 mode=cluster
+[LGBM-RESUME] n_households=348 n_iter=60 cv_splits=5
+[LGBM-RESUME] one completed trial is checkpointed before the next run starts
+[LGBM-RESUME] before=0 at 2026-07-28 09:47:30
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_094730.log
+[LGBM-RESUME] after=1 rc=0 at 2026-07-28 10:05:47
+[LGBM-RESUME] before=1 at 2026-07-28 10:05:47
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_100547.log
+[LGBM-RESUME] after=2 rc=0 at 2026-07-28 10:18:09
+[LGBM-RESUME] before=2 at 2026-07-28 10:18:09
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_101809.log
+[LGBM-RESUME] after=3 rc=0 at 2026-07-28 10:30:07
+[LGBM-RESUME] before=3 at 2026-07-28 10:30:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_103007.log
+[LGBM-RESUME] after=4 rc=0 at 2026-07-28 10:45:44
+[LGBM-RESUME] before=4 at 2026-07-28 10:45:44
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_104544.log
+[LGBM-RESUME] after=5 rc=0 at 2026-07-28 10:56:20
+[LGBM-RESUME] before=5 at 2026-07-28 10:56:20
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_105620.log
+[LGBM-RESUME] after=6 rc=0 at 2026-07-28 11:05:44
+[LGBM-RESUME] before=6 at 2026-07-28 11:05:44
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_110544.log
+[LGBM-RESUME] after=7 rc=0 at 2026-07-28 11:26:39
+[LGBM-RESUME] before=7 at 2026-07-28 11:26:39
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_112639.log
+[LGBM-RESUME] after=8 rc=0 at 2026-07-28 11:44:31
+[LGBM-RESUME] before=8 at 2026-07-28 11:44:31
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_114431.log
+[LGBM-RESUME] after=9 rc=0 at 2026-07-28 11:56:20
+[LGBM-RESUME] before=9 at 2026-07-28 11:56:20
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_115620.log
+[LGBM-RESUME] after=10 rc=0 at 2026-07-28 12:13:17
+[LGBM-RESUME] before=10 at 2026-07-28 12:13:17
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_121317.log
+[LGBM-RESUME] after=11 rc=0 at 2026-07-28 12:37:03
+[LGBM-RESUME] before=11 at 2026-07-28 12:37:03
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_123703.log
+[LGBM-RESUME] after=12 rc=0 at 2026-07-28 12:59:16
+[LGBM-RESUME] before=12 at 2026-07-28 12:59:16
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_125916.log
+[LGBM-RESUME] after=13 rc=0 at 2026-07-28 13:10:29
+[LGBM-RESUME] before=13 at 2026-07-28 13:10:29
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_131029.log
+[LGBM-RESUME] after=14 rc=0 at 2026-07-28 13:36:01
+[LGBM-RESUME] before=14 at 2026-07-28 13:36:01
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_133601.log
+[LGBM-RESUME] after=15 rc=0 at 2026-07-28 14:08:58
+[LGBM-RESUME] before=15 at 2026-07-28 14:08:58
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_140858.log
+[LGBM-RESUME] after=16 rc=0 at 2026-07-28 14:27:59
+[LGBM-RESUME] before=16 at 2026-07-28 14:27:59
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_142759.log
+[LGBM-RESUME] after=17 rc=0 at 2026-07-28 14:54:06
+[LGBM-RESUME] before=17 at 2026-07-28 14:54:06
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_145406.log
+[LGBM-RESUME] after=18 rc=0 at 2026-07-28 15:17:24
+[LGBM-RESUME] before=18 at 2026-07-28 15:17:24
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_151724.log
+[LGBM-RESUME] after=19 rc=0 at 2026-07-28 15:27:12
+[LGBM-RESUME] before=19 at 2026-07-28 15:27:12
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_152712.log
+[LGBM-RESUME] after=20 rc=0 at 2026-07-28 15:47:23
+[LGBM-RESUME] before=20 at 2026-07-28 15:47:23
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_154723.log
+[LGBM-RESUME] after=21 rc=0 at 2026-07-28 16:06:50
+[LGBM-RESUME] before=21 at 2026-07-28 16:06:50
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_160650.log
+[LGBM-RESUME] after=22 rc=0 at 2026-07-28 16:19:43
+[LGBM-RESUME] before=22 at 2026-07-28 16:19:43
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_161943.log
+[LGBM-RESUME] after=23 rc=0 at 2026-07-28 16:38:57
+[LGBM-RESUME] before=23 at 2026-07-28 16:38:57
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_163857.log
+[LGBM-RESUME] after=24 rc=0 at 2026-07-28 16:58:24
+[LGBM-RESUME] before=24 at 2026-07-28 16:58:24
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_165824.log
+[LGBM-RESUME] after=25 rc=0 at 2026-07-28 17:13:48
+[LGBM-RESUME] before=25 at 2026-07-28 17:13:48
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_171348.log
+[LGBM-RESUME] after=26 rc=0 at 2026-07-28 17:29:02
+[LGBM-RESUME] before=26 at 2026-07-28 17:29:02
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_172902.log
+[LGBM-RESUME] after=27 rc=0 at 2026-07-28 17:40:07
+[LGBM-RESUME] before=27 at 2026-07-28 17:40:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_174007.log
+[LGBM-RESUME] after=28 rc=0 at 2026-07-28 17:51:55
+[LGBM-RESUME] before=28 at 2026-07-28 17:51:55
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_175155.log
+[LGBM-RESUME] after=29 rc=0 at 2026-07-28 18:18:46
+[LGBM-RESUME] before=29 at 2026-07-28 18:18:46
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_181846.log
+[LGBM-RESUME] after=30 rc=0 at 2026-07-28 18:36:12
+[LGBM-RESUME] before=30 at 2026-07-28 18:36:12
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_183612.log
+[LGBM-RESUME] after=31 rc=0 at 2026-07-28 18:57:04
+[LGBM-RESUME] before=31 at 2026-07-28 18:57:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_185704.log
+[LGBM-RESUME] after=32 rc=0 at 2026-07-28 19:10:48
+[LGBM-RESUME] before=32 at 2026-07-28 19:10:48
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_191048.log
+[LGBM-RESUME] after=33 rc=0 at 2026-07-28 19:29:09
+[LGBM-RESUME] before=33 at 2026-07-28 19:29:09
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_192909.log
+[LGBM-RESUME] after=34 rc=0 at 2026-07-28 20:00:42
+[LGBM-RESUME] before=34 at 2026-07-28 20:00:42
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260728_200042.log
+[LGBM-RESUME] after=35 rc=0 at 2026-07-29 05:04:57
+[LGBM-RESUME] before=35 at 2026-07-29 05:04:57
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_050457.log
+[LGBM-RESUME] after=36 rc=0 at 2026-07-29 09:40:05
+[LGBM-RESUME] before=36 at 2026-07-29 09:40:05
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_094005.log
+[LGBM-RESUME] after=37 rc=0 at 2026-07-29 09:55:57
+[LGBM-RESUME] before=37 at 2026-07-29 09:55:57
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_095557.log
+[LGBM-RESUME] start=2026-07-29 10:06:18 mode=cluster
+[LGBM-RESUME] n_households=348 n_iter=60 cv_splits=5
+[LGBM-RESUME] one completed trial is checkpointed before the next run starts
+[LGBM-RESUME] before=37 at 2026-07-29 10:06:18
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_100618.log
+[LGBM-RESUME] after=38 rc=0 at 2026-07-29 10:23:24
+[LGBM-RESUME] before=38 at 2026-07-29 10:23:24
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_102324.log
+[LGBM-RESUME] after=38 rc=0 at 2026-07-29 10:52:08
+[LGBM-RESUME] before=38 at 2026-07-29 10:52:08
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_105209.log
+[LGBM-RESUME] after=39 rc=0 at 2026-07-29 10:54:04
+[LGBM-RESUME] before=39 at 2026-07-29 10:54:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_105404.log
+[LGBM-RESUME] after=39 rc=0 at 2026-07-29 11:13:48
+[LGBM-RESUME] before=39 at 2026-07-29 11:13:48
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_111348.log
+[LGBM-RESUME] after=40 rc=0 at 2026-07-29 11:37:43
+[LGBM-RESUME] before=40 at 2026-07-29 11:37:43
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_113743.log
+[LGBM-RESUME] after=40 rc=0 at 2026-07-29 11:54:22
+[LGBM-RESUME] before=40 at 2026-07-29 11:54:22
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_115422.log
+[LGBM-RESUME] after=41 rc=0 at 2026-07-29 12:01:01
+[LGBM-RESUME] before=41 at 2026-07-29 12:01:01
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_120101.log
+[LGBM-RESUME] after=41 rc=0 at 2026-07-29 12:26:54
+[LGBM-RESUME] before=41 at 2026-07-29 12:26:54
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_122654.log
+[LGBM-RESUME] after=42 rc=0 at 2026-07-29 12:57:32
+[LGBM-RESUME] before=42 at 2026-07-29 12:57:32
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_125732.log
+[LGBM-RESUME] after=42 rc=0 at 2026-07-29 13:16:33
+[LGBM-RESUME] before=42 at 2026-07-29 13:16:33
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_131633.log
+[LGBM-RESUME] after=43 rc=0 at 2026-07-29 13:35:17
+[LGBM-RESUME] before=43 at 2026-07-29 13:35:17
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_133517.log
+[LGBM-RESUME] after=43 rc=0 at 2026-07-29 13:53:15
+[LGBM-RESUME] before=43 at 2026-07-29 13:53:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_135315.log
+[LGBM-RESUME] after=44 rc=0 at 2026-07-29 14:00:32
+[LGBM-RESUME] before=44 at 2026-07-29 14:00:32
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_140032.log
+[LGBM-RESUME] after=44 rc=0 at 2026-07-29 14:18:01
+[LGBM-RESUME] before=44 at 2026-07-29 14:18:01
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_141801.log
+[LGBM-RESUME] after=45 rc=0 at 2026-07-29 14:35:56
+[LGBM-RESUME] before=45 at 2026-07-29 14:35:56
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_143556.log
+[LGBM-RESUME] after=45 rc=0 at 2026-07-29 14:56:35
+[LGBM-RESUME] before=45 at 2026-07-29 14:56:35
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_145635.log
+[LGBM-RESUME] after=46 rc=0 at 2026-07-29 15:05:25
+[LGBM-RESUME] before=46 at 2026-07-29 15:05:25
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_150525.log
+[LGBM-RESUME] after=46 rc=0 at 2026-07-29 15:24:48
+[LGBM-RESUME] before=46 at 2026-07-29 15:24:48
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_152448.log
+[LGBM-RESUME] after=47 rc=0 at 2026-07-29 15:40:37
+[LGBM-RESUME] before=47 at 2026-07-29 15:40:37
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_154038.log
+[LGBM-RESUME] after=47 rc=0 at 2026-07-29 16:02:21
+[LGBM-RESUME] before=47 at 2026-07-29 16:02:21
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_160221.log
+[LGBM-RESUME] after=48 rc=0 at 2026-07-29 16:21:42
+[LGBM-RESUME] before=48 at 2026-07-29 16:21:42
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_162142.log
+[LGBM-RESUME] after=48 rc=0 at 2026-07-29 16:41:04
+[LGBM-RESUME] before=48 at 2026-07-29 16:41:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_164104.log
+[LGBM-RESUME] after=49 rc=0 at 2026-07-29 17:18:53
+[LGBM-RESUME] before=49 at 2026-07-29 17:18:53
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_171853.log
+[LGBM-RESUME] after=49 rc=0 at 2026-07-29 17:42:58
+[LGBM-RESUME] before=49 at 2026-07-29 17:42:58
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_174258.log
+[LGBM-RESUME] after=50 rc=0 at 2026-07-29 18:10:20
+[LGBM-RESUME] before=50 at 2026-07-29 18:10:20
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_181020.log
+[LGBM-RESUME] after=50 rc=0 at 2026-07-29 18:32:44
+[LGBM-RESUME] before=50 at 2026-07-29 18:32:44
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_183244.log
+[LGBM-RESUME] after=51 rc=0 at 2026-07-29 18:45:42
+[LGBM-RESUME] before=51 at 2026-07-29 18:45:42
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_184542.log
+[LGBM-RESUME] after=51 rc=0 at 2026-07-29 19:06:18
+[LGBM-RESUME] before=51 at 2026-07-29 19:06:18
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_190618.log
+[LGBM-RESUME] after=52 rc=0 at 2026-07-29 19:17:35
+[LGBM-RESUME] before=52 at 2026-07-29 19:17:35
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_191735.log
+[LGBM-RESUME] after=52 rc=0 at 2026-07-29 19:42:44
+[LGBM-RESUME] before=52 at 2026-07-29 19:42:44
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_194244.log
+[LGBM-RESUME] after=53 rc=0 at 2026-07-29 19:54:56
+[LGBM-RESUME] before=53 at 2026-07-29 19:54:56
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_195456.log
+[LGBM-RESUME] after=53 rc=0 at 2026-07-29 20:17:45
+[LGBM-RESUME] before=53 at 2026-07-29 20:17:45
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_201745.log
+[LGBM-RESUME] after=54 rc=0 at 2026-07-29 20:46:20
+[LGBM-RESUME] before=54 at 2026-07-29 20:46:20
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_204620.log
+[LGBM-RESUME] after=54 rc=0 at 2026-07-29 21:01:51
+[LGBM-RESUME] before=54 at 2026-07-29 21:01:51
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_210151.log
+[LGBM-RESUME] after=55 rc=0 at 2026-07-29 21:09:37
+[LGBM-RESUME] before=55 at 2026-07-29 21:09:37
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_210937.log
+[LGBM-RESUME] after=56 rc=0 at 2026-07-29 21:23:14
+[LGBM-RESUME] before=56 at 2026-07-29 21:23:14
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_212314.log
+[LGBM-RESUME] after=55 rc=0 at 2026-07-29 21:24:25
+[LGBM-RESUME] before=55 at 2026-07-29 21:24:25
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_212425.log
+[LGBM-RESUME] after=57 rc=0 at 2026-07-29 21:32:50
+[LGBM-RESUME] before=57 at 2026-07-29 21:32:50
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_213250.log
+[LGBM-RESUME] after=56 rc=0 at 2026-07-29 21:36:55
+[LGBM-RESUME] before=56 at 2026-07-29 21:36:55
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_213655.log
+[LGBM-RESUME] after=57 rc=0 at 2026-07-29 21:48:19
+[LGBM-RESUME] before=57 at 2026-07-29 21:48:19
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_214819.log
+[LGBM-RESUME] after=58 rc=0 at 2026-07-29 21:56:06
+[LGBM-RESUME] before=58 at 2026-07-29 21:56:06
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_215606.log
+[LGBM-RESUME] after=58 rc=0 at 2026-07-29 22:21:06
+[LGBM-RESUME] before=58 at 2026-07-29 22:21:06
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260729_222106.log
+[LGBM-RESUME] after=59 rc=0 at 2026-07-30 04:51:23
+[LGBM-RESUME] before=59 at 2026-07-30 04:51:23
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_045123.log
+[LGBM-RESUME] after=59 rc=0 at 2026-07-30 09:10:28
+[LGBM-RESUME] before=59 at 2026-07-30 09:10:28
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_091028.log
+[LGBM-RESUME] after=60 rc=0 at 2026-07-30 09:40:43
+[LGBM-RESUME] before=60 at 2026-07-30 09:40:43
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_094043.log
+[LGBM-RESUME] after=60 rc=0 at 2026-07-30 09:55:59
+[LGBM-RESUME] before=60 at 2026-07-30 09:55:59
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_095559.log
+[LGBM-RESUME] after=61 rc=0 at 2026-07-30 09:57:41
+[LGBM-RESUME] before=61 at 2026-07-30 09:57:41
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_095741.log
+[LGBM-RESUME] after=62 rc=0 at 2026-07-30 10:06:57
+[LGBM-RESUME] before=62 at 2026-07-30 10:06:57
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_100657.log
+[LGBM-RESUME] after=61 rc=0 at 2026-07-30 10:11:24
+[LGBM-RESUME] before=61 at 2026-07-30 10:11:24
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_101124.log
+[LGBM-RESUME] after=63 rc=0 at 2026-07-30 10:15:41
+[LGBM-RESUME] before=63 at 2026-07-30 10:15:41
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_101541.log
+[LGBM-RESUME] start=2026-07-30 10:20:40 mode=cluster
+[LGBM-RESUME] n_households=348 n_iter=60 cv_splits=5
+[LGBM-RESUME] one completed trial is checkpointed before the next run starts
+[LGBM-RESUME] before=63 at 2026-07-30 10:20:40
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_102040.log
+[LGBM-RESUME] after=62 rc=0 at 2026-07-30 10:22:28
+[LGBM-RESUME] before=62 at 2026-07-30 10:22:28
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_102228.log
+[LGBM-RESUME] after=64 rc=0 at 2026-07-30 10:29:27
+[LGBM-RESUME] before=64 at 2026-07-30 10:29:27
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_102927.log
+[LGBM-RESUME] after=63 rc=0 at 2026-07-30 10:36:55
+[LGBM-RESUME] before=63 at 2026-07-30 10:36:55
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_103655.log
+[LGBM-RESUME] after=64 rc=0 at 2026-07-30 10:37:11
+[LGBM-RESUME] before=64 at 2026-07-30 10:37:11
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_103711.log
+[LGBM-RESUME] after=65 rc=0 at 2026-07-30 10:39:15
+[LGBM-RESUME] before=65 at 2026-07-30 10:39:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_103915.log
+[LGBM-RESUME] after=65 rc=0 at 2026-07-30 10:45:21
+[LGBM-RESUME] before=65 at 2026-07-30 10:45:21
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_104521.log
+[LGBM-RESUME] after=65 rc=0 at 2026-07-30 10:45:44
+[LGBM-RESUME] before=65 at 2026-07-30 10:45:44
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_104544.log
+[LGBM-RESUME] after=66 rc=0 at 2026-07-30 10:48:29
+[LGBM-RESUME] before=66 at 2026-07-30 10:48:29
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_104829.log
+[LGBM-RESUME] after=66 rc=0 at 2026-07-30 10:54:15
+[LGBM-RESUME] before=66 at 2026-07-30 10:54:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_105415.log
+[LGBM-RESUME] after=66 rc=0 at 2026-07-30 10:54:25
+[LGBM-RESUME] before=66 at 2026-07-30 10:54:25
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_105425.log
+[LGBM-RESUME] after=67 rc=0 at 2026-07-30 11:05:26
+[LGBM-RESUME] before=67 at 2026-07-30 11:05:26
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_110526.log
+[LGBM-RESUME] after=67 rc=0 at 2026-07-30 11:11:05
+[LGBM-RESUME] before=67 at 2026-07-30 11:11:05
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_111105.log
+[LGBM-RESUME] after=67 rc=0 at 2026-07-30 11:11:19
+[LGBM-RESUME] before=67 at 2026-07-30 11:11:19
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_111119.log
+[LGBM-RESUME] after=68 rc=0 at 2026-07-30 11:28:26
+[LGBM-RESUME] before=68 at 2026-07-30 11:28:26
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_112826.log
+[LGBM-RESUME] after=68 rc=0 at 2026-07-30 11:34:04
+[LGBM-RESUME] before=68 at 2026-07-30 11:34:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_113404.log
+[LGBM-RESUME] after=68 rc=0 at 2026-07-30 11:34:16
+[LGBM-RESUME] before=68 at 2026-07-30 11:34:16
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_113416.log
+[LGBM-RESUME] after=69 rc=0 at 2026-07-30 11:39:07
+[LGBM-RESUME] before=69 at 2026-07-30 11:39:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_113907.log
+[LGBM-RESUME] after=69 rc=0 at 2026-07-30 11:45:38
+[LGBM-RESUME] before=69 at 2026-07-30 11:45:38
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_114538.log
+[LGBM-RESUME] after=69 rc=0 at 2026-07-30 11:45:49
+[LGBM-RESUME] before=69 at 2026-07-30 11:45:49
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_114549.log
+[LGBM-RESUME] after=70 rc=0 at 2026-07-30 11:58:05
+[LGBM-RESUME] before=70 at 2026-07-30 11:58:05
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_115805.log
+[LGBM-RESUME] after=70 rc=0 at 2026-07-30 12:05:42
+[LGBM-RESUME] before=70 at 2026-07-30 12:05:42
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_120542.log
+[LGBM-RESUME] after=70 rc=0 at 2026-07-30 12:05:53
+[LGBM-RESUME] before=70 at 2026-07-30 12:05:53
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_120553.log
+[LGBM-RESUME] after=71 rc=0 at 2026-07-30 12:21:04
+[LGBM-RESUME] before=71 at 2026-07-30 12:21:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_122104.log
+[LGBM-RESUME] after=71 rc=0 at 2026-07-30 12:26:54
+[LGBM-RESUME] before=71 at 2026-07-30 12:26:54
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_122654.log
+[LGBM-RESUME] after=71 rc=0 at 2026-07-30 12:27:02
+[LGBM-RESUME] before=71 at 2026-07-30 12:27:02
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_122702.log
+[LGBM-RESUME] after=72 rc=0 at 2026-07-30 12:45:08
+[LGBM-RESUME] before=72 at 2026-07-30 12:45:08
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_124508.log
+[LGBM-RESUME] after=72 rc=0 at 2026-07-30 12:52:10
+[LGBM-RESUME] before=72 at 2026-07-30 12:52:10
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_125211.log
+[LGBM-RESUME] after=72 rc=0 at 2026-07-30 12:52:17
+[LGBM-RESUME] before=72 at 2026-07-30 12:52:17
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_125217.log
+[LGBM-RESUME] after=73 rc=0 at 2026-07-30 12:57:13
+[LGBM-RESUME] before=73 at 2026-07-30 12:57:13
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_125713.log
+[LGBM-RESUME] after=73 rc=0 at 2026-07-30 13:05:02
+[LGBM-RESUME] before=73 at 2026-07-30 13:05:02
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_130502.log
+[LGBM-RESUME] after=73 rc=0 at 2026-07-30 13:05:06
+[LGBM-RESUME] before=73 at 2026-07-30 13:05:06
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_130506.log
+[LGBM-RESUME] after=74 rc=0 at 2026-07-30 13:22:05
+[LGBM-RESUME] before=74 at 2026-07-30 13:22:05
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_132205.log
+[LGBM-RESUME] after=74 rc=0 at 2026-07-30 13:29:33
+[LGBM-RESUME] before=74 at 2026-07-30 13:29:33
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_132933.log
+[LGBM-RESUME] after=74 rc=0 at 2026-07-30 13:29:34
+[LGBM-RESUME] before=74 at 2026-07-30 13:29:34
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_132934.log
+[LGBM-RESUME] after=75 rc=0 at 2026-07-30 13:52:50
+[LGBM-RESUME] before=75 at 2026-07-30 13:52:50
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_135250.log
+[LGBM-RESUME] after=75 rc=0 at 2026-07-30 14:02:12
+[LGBM-RESUME] before=75 at 2026-07-30 14:02:12
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_140212.log
+[LGBM-RESUME] after=75 rc=0 at 2026-07-30 14:02:15
+[LGBM-RESUME] before=75 at 2026-07-30 14:02:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_140215.log
+[LGBM-RESUME] after=76 rc=0 at 2026-07-30 14:11:38
+[LGBM-RESUME] before=76 at 2026-07-30 14:11:38
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_141138.log
+[LGBM-RESUME] after=76 rc=0 at 2026-07-30 14:22:22
+[LGBM-RESUME] before=76 at 2026-07-30 14:22:22
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_142222.log
+[LGBM-RESUME] after=76 rc=0 at 2026-07-30 14:22:22
+[LGBM-RESUME] before=76 at 2026-07-30 14:22:22
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_142222.log
+[LGBM-RESUME] after=77 rc=0 at 2026-07-30 14:39:07
+[LGBM-RESUME] before=77 at 2026-07-30 14:39:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_143907.log
+[LGBM-RESUME] after=77 rc=0 at 2026-07-30 14:51:01
+[LGBM-RESUME] before=77 at 2026-07-30 14:51:01
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_145101.log
+[LGBM-RESUME] after=77 rc=0 at 2026-07-30 14:51:03
+[LGBM-RESUME] before=77 at 2026-07-30 14:51:03
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_145103.log
+[LGBM-RESUME] after=78 rc=0 at 2026-07-30 15:03:14
+[LGBM-RESUME] before=78 at 2026-07-30 15:03:14
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_150314.log
+[LGBM-RESUME] after=79 rc=0 at 2026-07-30 15:13:02
+[LGBM-RESUME] before=79 at 2026-07-30 15:13:02
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_151302.log
+[LGBM-RESUME] after=78 rc=0 at 2026-07-30 15:15:03
+[LGBM-RESUME] before=78 at 2026-07-30 15:15:03
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_151503.log
+[LGBM-RESUME] after=78 rc=0 at 2026-07-30 15:16:21
+[LGBM-RESUME] before=78 at 2026-07-30 15:16:21
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_151621.log
+[LGBM-RESUME] after=79 rc=0 at 2026-07-30 15:24:21
+[LGBM-RESUME] before=79 at 2026-07-30 15:24:21
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_152421.log
+[LGBM-RESUME] after=79 rc=0 at 2026-07-30 15:25:47
+[LGBM-RESUME] before=79 at 2026-07-30 15:25:47
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_152547.log
+[LGBM-RESUME] after=80 rc=0 at 2026-07-30 15:30:32
+[LGBM-RESUME] before=80 at 2026-07-30 15:30:32
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_153032.log
+[LGBM-RESUME] after=80 rc=0 at 2026-07-30 15:42:56
+[LGBM-RESUME] before=80 at 2026-07-30 15:42:56
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_154256.log
+[LGBM-RESUME] after=80 rc=0 at 2026-07-30 15:44:17
+[LGBM-RESUME] before=80 at 2026-07-30 15:44:17
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_154417.log
+[LGBM-RESUME] after=81 rc=0 at 2026-07-30 16:01:31
+[LGBM-RESUME] before=81 at 2026-07-30 16:01:31
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_160131.log
+[LGBM-RESUME] after=81 rc=0 at 2026-07-30 16:13:32
+[LGBM-RESUME] before=81 at 2026-07-30 16:13:32
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_161332.log
+[LGBM-RESUME] after=81 rc=0 at 2026-07-30 16:14:46
+[LGBM-RESUME] before=81 at 2026-07-30 16:14:46
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_161446.log
+[LGBM-RESUME] after=82 rc=0 at 2026-07-30 16:17:02
+[LGBM-RESUME] before=82 at 2026-07-30 16:17:02
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_161702.log
+[LGBM-RESUME] after=82 rc=0 at 2026-07-30 16:28:55
+[LGBM-RESUME] before=82 at 2026-07-30 16:28:55
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_162855.log
+[LGBM-RESUME] after=82 rc=0 at 2026-07-30 16:30:29
+[LGBM-RESUME] before=82 at 2026-07-30 16:30:29
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_163029.log
+[LGBM-RESUME] after=83 rc=0 at 2026-07-30 16:35:04
+[LGBM-RESUME] before=83 at 2026-07-30 16:35:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_163504.log
+[LGBM-RESUME] after=83 rc=0 at 2026-07-30 16:47:09
+[LGBM-RESUME] before=83 at 2026-07-30 16:47:09
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_164709.log
+[LGBM-RESUME] after=83 rc=0 at 2026-07-30 16:48:33
+[LGBM-RESUME] before=83 at 2026-07-30 16:48:33
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_164833.log
+[LGBM-RESUME] after=84 rc=0 at 2026-07-30 16:53:49
+[LGBM-RESUME] before=84 at 2026-07-30 16:53:49
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_165349.log
+[LGBM-RESUME] after=85 rc=0 at 2026-07-30 16:59:34
+[LGBM-RESUME] before=85 at 2026-07-30 16:59:34
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_165934.log
+[LGBM-RESUME] after=84 rc=0 at 2026-07-30 17:05:13
+[LGBM-RESUME] before=84 at 2026-07-30 17:05:13
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_170513.log
+[LGBM-RESUME] after=84 rc=0 at 2026-07-30 17:05:56
+[LGBM-RESUME] before=84 at 2026-07-30 17:05:56
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_170556.log
+[LGBM-RESUME] after=86 rc=0 at 2026-07-30 17:10:30
+[LGBM-RESUME] before=86 at 2026-07-30 17:10:30
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_171030.log
+[LGBM-RESUME] after=85 rc=0 at 2026-07-30 17:11:27
+[LGBM-RESUME] before=85 at 2026-07-30 17:11:27
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_171127.log
+[LGBM-RESUME] after=85 rc=0 at 2026-07-30 17:12:11
+[LGBM-RESUME] before=85 at 2026-07-30 17:12:11
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_171211.log
+[LGBM-RESUME] after=86 rc=0 at 2026-07-30 17:21:52
+[LGBM-RESUME] no checkpoint progress, failures=1/2
+[LGBM-RESUME] before=86 at 2026-07-30 17:21:52
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_172153.log
+[LGBM-RESUME] after=86 rc=0 at 2026-07-30 17:23:06
+[LGBM-RESUME] before=86 at 2026-07-30 17:23:06
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_172306.log
+[LGBM-RESUME] after=86 rc=0 at 2026-07-30 17:23:49
+[LGBM-RESUME] before=86 at 2026-07-30 17:23:49
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_172349.log
+[LGBM-RESUME] after=87 rc=0 at 2026-07-30 17:32:27
+[LGBM-RESUME] before=87 at 2026-07-30 17:32:27
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_173227.log
+[LGBM-RESUME] after=87 rc=0 at 2026-07-30 17:33:45
+[LGBM-RESUME] before=87 at 2026-07-30 17:33:45
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_173345.log
+[LGBM-RESUME] after=87 rc=0 at 2026-07-30 17:34:21
+[LGBM-RESUME] before=87 at 2026-07-30 17:34:21
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_173421.log
+[LGBM-RESUME] after=88 rc=0 at 2026-07-30 17:42:54
+[LGBM-RESUME] before=88 at 2026-07-30 17:42:54
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_174254.log
+[LGBM-RESUME] after=88 rc=0 at 2026-07-30 17:44:18
+[LGBM-RESUME] before=88 at 2026-07-30 17:44:18
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_174418.log
+[LGBM-RESUME] after=88 rc=0 at 2026-07-30 17:44:58
+[LGBM-RESUME] before=88 at 2026-07-30 17:44:58
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_174458.log
+[LGBM-RESUME] after=89 rc=0 at 2026-07-30 18:08:01
+[LGBM-RESUME] before=89 at 2026-07-30 18:08:01
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_180801.log
+[LGBM-RESUME] after=89 rc=0 at 2026-07-30 18:09:25
+[LGBM-RESUME] before=89 at 2026-07-30 18:09:25
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_180925.log
+[LGBM-RESUME] after=89 rc=0 at 2026-07-30 18:09:50
+[LGBM-RESUME] before=89 at 2026-07-30 18:09:50
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_180950.log
+[LGBM-RESUME] after=90 rc=0 at 2026-07-30 18:25:41
+[LGBM-RESUME] before=90 at 2026-07-30 18:25:41
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_182541.log
+[LGBM-RESUME] after=90 rc=0 at 2026-07-30 18:26:41
+[LGBM-RESUME] before=90 at 2026-07-30 18:26:41
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_182641.log
+[LGBM-RESUME] after=90 rc=0 at 2026-07-30 18:27:07
+[LGBM-RESUME] before=90 at 2026-07-30 18:27:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_182707.log
+[LGBM-RESUME] after=91 rc=0 at 2026-07-30 19:39:40
+[LGBM-RESUME] before=91 at 2026-07-30 19:39:40
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_193940.log
+[LGBM-RESUME] after=91 rc=0 at 2026-07-30 20:47:01
+[LGBM-RESUME] before=91 at 2026-07-30 20:47:01
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_204701.log
+[LGBM-RESUME] after=91 rc=0 at 2026-07-30 21:08:05
+[LGBM-RESUME] before=91 at 2026-07-30 21:08:05
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260730_210805.log
+[LGBM-RESUME] after=92 rc=0 at 2026-07-31 09:16:53
+[LGBM-RESUME] before=92 at 2026-07-31 09:16:53
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_091653.log
+[LGBM-RESUME] after=92 rc=0 at 2026-07-31 09:17:37
+[LGBM-RESUME] before=92 at 2026-07-31 09:17:37
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_091737.log
+[LGBM-RESUME] after=92 rc=0 at 2026-07-31 09:17:45
+[LGBM-RESUME] before=92 at 2026-07-31 09:17:45
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_091745.log
+[LGBM-RESUME] after=93 rc=0 at 2026-07-31 09:28:26
+[LGBM-RESUME] before=93 at 2026-07-31 09:28:26
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_092826.log
+[LGBM-RESUME] after=93 rc=0 at 2026-07-31 09:29:16
+[LGBM-RESUME] before=93 at 2026-07-31 09:29:16
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_092916.log
+[LGBM-RESUME] after=93 rc=0 at 2026-07-31 09:29:26
+[LGBM-RESUME] before=93 at 2026-07-31 09:29:26
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_092926.log
+[LGBM-RESUME] start=2026-07-31 09:41:49 mode=cluster
+[LGBM-RESUME] n_households=348 n_iter=60 cv_splits=5
+[LGBM-RESUME] one completed trial is checkpointed before the next run starts
+[LGBM-RESUME] before=93 at 2026-07-31 09:41:49
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_094149.log
+[LGBM-RESUME] after=94 rc=0 at 2026-07-31 09:49:42
+[LGBM-RESUME] before=94 at 2026-07-31 09:49:42
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_094942.log
+[LGBM-RESUME] after=94 rc=0 at 2026-07-31 09:51:07
+[LGBM-RESUME] before=94 at 2026-07-31 09:51:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_095107.log
+[LGBM-RESUME] after=94 rc=0 at 2026-07-31 09:51:18
+[LGBM-RESUME] before=94 at 2026-07-31 09:51:18
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_095118.log
+[LGBM-RESUME] after=95 rc=0 at 2026-07-31 10:00:07
+[LGBM-RESUME] before=95 at 2026-07-31 10:00:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_100007.log
+[LGBM-RESUME] after=95 rc=0 at 2026-07-31 10:01:27
+[LGBM-RESUME] before=95 at 2026-07-31 10:01:27
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_100127.log
+[LGBM-RESUME] after=95 rc=0 at 2026-07-31 10:01:38
+[LGBM-RESUME] before=95 at 2026-07-31 10:01:38
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_100138.log
+[LGBM-RESUME] after=94 rc=0 at 2026-07-31 10:05:27
+[LGBM-RESUME] before=94 at 2026-07-31 10:05:27
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_100527.log
+[LGBM-RESUME] after=95 rc=0 at 2026-07-31 10:17:20
+[LGBM-RESUME] before=95 at 2026-07-31 10:17:20
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_101720.log
+[LGBM-RESUME] after=96 rc=0 at 2026-07-31 10:18:06
+[LGBM-RESUME] before=96 at 2026-07-31 10:18:06
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_101806.log
+[LGBM-RESUME] after=96 rc=0 at 2026-07-31 10:19:07
+[LGBM-RESUME] before=96 at 2026-07-31 10:19:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_101907.log
+[LGBM-RESUME] after=96 rc=0 at 2026-07-31 10:19:15
+[LGBM-RESUME] before=96 at 2026-07-31 10:19:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_101915.log
+[LGBM-RESUME] after=97 rc=0 at 2026-07-31 10:39:12
+[LGBM-RESUME] before=97 at 2026-07-31 10:39:12
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_103912.log
+[LGBM-RESUME] after=97 rc=0 at 2026-07-31 10:39:14
+[LGBM-RESUME] before=97 at 2026-07-31 10:39:14
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_103914.log
+[LGBM-RESUME] after=97 rc=0 at 2026-07-31 10:39:54
+[LGBM-RESUME] before=97 at 2026-07-31 10:39:54
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_103954.log
+[LGBM-RESUME] after=97 rc=0 at 2026-07-31 10:39:59
+[LGBM-RESUME] before=97 at 2026-07-31 10:39:59
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_103959.log
+[LGBM-RESUME] after=98 rc=0 at 2026-07-31 11:05:15
+[LGBM-RESUME] before=98 at 2026-07-31 11:05:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_110515.log
+[LGBM-RESUME] after=98 rc=0 at 2026-07-31 11:06:04
+[LGBM-RESUME] before=98 at 2026-07-31 11:06:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_110604.log
+[LGBM-RESUME] after=98 rc=0 at 2026-07-31 11:06:17
+[LGBM-RESUME] before=98 at 2026-07-31 11:06:17
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_110618.log
+[LGBM-RESUME] after=98 rc=0 at 2026-07-31 11:06:23
+[LGBM-RESUME] before=98 at 2026-07-31 11:06:23
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_110623.log
+[LGBM-RESUME] after=99 rc=0 at 2026-07-31 11:21:12
+[LGBM-RESUME] before=99 at 2026-07-31 11:21:12
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_112112.log
+[LGBM-RESUME] after=99 rc=0 at 2026-07-31 11:22:06
+[LGBM-RESUME] before=99 at 2026-07-31 11:22:06
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_112206.log
+[LGBM-RESUME] after=99 rc=0 at 2026-07-31 11:22:15
+[LGBM-RESUME] before=99 at 2026-07-31 11:22:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_112215.log
+[LGBM-RESUME] after=99 rc=0 at 2026-07-31 11:22:21
+[LGBM-RESUME] before=99 at 2026-07-31 11:22:21
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_112221.log
+[LGBM-RESUME] after=100 rc=0 at 2026-07-31 11:48:23
+[LGBM-RESUME] before=100 at 2026-07-31 11:48:23
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_114823.log
+[LGBM-RESUME] after=100 rc=0 at 2026-07-31 11:48:42
+[LGBM-RESUME] before=100 at 2026-07-31 11:48:42
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_114842.log
+[LGBM-RESUME] after=100 rc=0 at 2026-07-31 11:48:51
+[LGBM-RESUME] before=100 at 2026-07-31 11:48:51
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_114851.log
+[LGBM-RESUME] after=100 rc=0 at 2026-07-31 11:49:17
+[LGBM-RESUME] before=100 at 2026-07-31 11:49:17
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_114917.log
+[LGBM-RESUME] after=101 rc=0 at 2026-07-31 12:03:59
+[LGBM-RESUME] before=101 at 2026-07-31 12:03:59
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_120359.log
+[LGBM-RESUME] after=101 rc=0 at 2026-07-31 12:04:15
+[LGBM-RESUME] before=101 at 2026-07-31 12:04:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_120415.log
+[LGBM-RESUME] after=101 rc=0 at 2026-07-31 12:04:26
+[LGBM-RESUME] before=101 at 2026-07-31 12:04:26
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_120426.log
+[LGBM-RESUME] after=101 rc=0 at 2026-07-31 12:04:51
+[LGBM-RESUME] before=101 at 2026-07-31 12:04:51
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_120451.log
+[LGBM-RESUME] after=102 rc=0 at 2026-07-31 12:32:56
+[LGBM-RESUME] before=102 at 2026-07-31 12:32:56
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_123256.log
+[LGBM-RESUME] after=102 rc=0 at 2026-07-31 12:33:14
+[LGBM-RESUME] before=102 at 2026-07-31 12:33:14
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_123314.log
+[LGBM-RESUME] after=102 rc=0 at 2026-07-31 12:33:26
+[LGBM-RESUME] before=102 at 2026-07-31 12:33:26
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_123326.log
+[LGBM-RESUME] after=102 rc=0 at 2026-07-31 12:33:35
+[LGBM-RESUME] before=102 at 2026-07-31 12:33:35
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_123335.log
+[LGBM-RESUME] after=103 rc=0 at 2026-07-31 12:53:26
+[LGBM-RESUME] before=103 at 2026-07-31 12:53:26
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_125326.log
+[LGBM-RESUME] after=103 rc=0 at 2026-07-31 12:53:58
+[LGBM-RESUME] before=103 at 2026-07-31 12:53:58
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_125358.log
+[LGBM-RESUME] after=103 rc=0 at 2026-07-31 12:54:11
+[LGBM-RESUME] before=103 at 2026-07-31 12:54:11
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_125411.log
+[LGBM-RESUME] after=103 rc=0 at 2026-07-31 12:54:14
+[LGBM-RESUME] before=103 at 2026-07-31 12:54:14
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_125415.log
+[LGBM-RESUME] after=104 rc=0 at 2026-07-31 13:07:11
+[LGBM-RESUME] before=104 at 2026-07-31 13:07:11
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_130711.log
+[LGBM-RESUME] after=104 rc=0 at 2026-07-31 13:07:40
+[LGBM-RESUME] before=104 at 2026-07-31 13:07:40
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_130740.log
+[LGBM-RESUME] after=104 rc=0 at 2026-07-31 13:07:57
+[LGBM-RESUME] before=104 at 2026-07-31 13:07:57
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_130757.log
+[LGBM-RESUME] after=104 rc=0 at 2026-07-31 13:08:00
+[LGBM-RESUME] before=104 at 2026-07-31 13:08:00
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_130800.log
+[LGBM-RESUME] after=105 rc=0 at 2026-07-31 13:27:45
+[LGBM-RESUME] before=105 at 2026-07-31 13:27:45
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_132745.log
+[LGBM-RESUME] after=105 rc=0 at 2026-07-31 13:28:12
+[LGBM-RESUME] before=105 at 2026-07-31 13:28:12
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_132812.log
+[LGBM-RESUME] after=105 rc=0 at 2026-07-31 13:28:24
+[LGBM-RESUME] before=105 at 2026-07-31 13:28:24
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_132824.log
+[LGBM-RESUME] after=105 rc=0 at 2026-07-31 13:28:29
+[LGBM-RESUME] before=105 at 2026-07-31 13:28:29
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_132829.log
+[LGBM-RESUME] after=106 rc=0 at 2026-07-31 13:42:25
+[LGBM-RESUME] before=106 at 2026-07-31 13:42:25
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_134225.log
+[LGBM-RESUME] after=106 rc=0 at 2026-07-31 13:42:52
+[LGBM-RESUME] before=106 at 2026-07-31 13:42:52
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_134252.log
+[LGBM-RESUME] after=106 rc=0 at 2026-07-31 13:43:08
+[LGBM-RESUME] before=106 at 2026-07-31 13:43:08
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_134308.log
+[LGBM-RESUME] after=106 rc=0 at 2026-07-31 13:43:15
+[LGBM-RESUME] before=106 at 2026-07-31 13:43:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_134315.log
+[LGBM-RESUME] after=107 rc=0 at 2026-07-31 14:02:08
+[LGBM-RESUME] before=107 at 2026-07-31 14:02:08
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_140208.log
+[LGBM-RESUME] after=107 rc=0 at 2026-07-31 14:02:31
+[LGBM-RESUME] before=107 at 2026-07-31 14:02:31
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_140231.log
+[LGBM-RESUME] after=107 rc=0 at 2026-07-31 14:02:44
+[LGBM-RESUME] before=107 at 2026-07-31 14:02:45
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_140245.log
+[LGBM-RESUME] after=107 rc=0 at 2026-07-31 14:02:52
+[LGBM-RESUME] before=107 at 2026-07-31 14:02:52
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_140252.log
+[LGBM-RESUME] after=108 rc=0 at 2026-07-31 14:24:51
+[LGBM-RESUME] before=108 at 2026-07-31 14:24:51
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_142451.log
+[LGBM-RESUME] after=108 rc=0 at 2026-07-31 14:25:07
+[LGBM-RESUME] before=108 at 2026-07-31 14:25:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_142507.log
+[LGBM-RESUME] after=108 rc=0 at 2026-07-31 14:25:17
+[LGBM-RESUME] before=108 at 2026-07-31 14:25:17
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_142517.log
+[LGBM-RESUME] after=108 rc=0 at 2026-07-31 14:25:24
+[LGBM-RESUME] before=108 at 2026-07-31 14:25:24
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_142524.log
+[LGBM-RESUME] after=109 rc=0 at 2026-07-31 14:55:14
+[LGBM-RESUME] before=109 at 2026-07-31 14:55:14
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_145514.log
+[LGBM-RESUME] after=109 rc=0 at 2026-07-31 14:55:53
+[LGBM-RESUME] before=109 at 2026-07-31 14:55:53
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_145553.log
+[LGBM-RESUME] after=109 rc=0 at 2026-07-31 14:56:15
+[LGBM-RESUME] before=109 at 2026-07-31 14:56:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_145615.log
+[LGBM-RESUME] after=109 rc=0 at 2026-07-31 14:56:15
+[LGBM-RESUME] before=109 at 2026-07-31 14:56:15
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_145615.log
+[LGBM-RESUME] after=110 rc=0 at 2026-07-31 15:22:04
+[LGBM-RESUME] before=110 at 2026-07-31 15:22:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_152204.log
+[LGBM-RESUME] after=110 rc=0 at 2026-07-31 15:22:47
+[LGBM-RESUME] before=110 at 2026-07-31 15:22:47
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_152247.log
+[LGBM-RESUME] after=110 rc=0 at 2026-07-31 15:24:08
+[LGBM-RESUME] before=110 at 2026-07-31 15:24:08
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_152408.log
+[LGBM-RESUME] after=110 rc=0 at 2026-07-31 15:24:09
+[LGBM-RESUME] before=110 at 2026-07-31 15:24:09
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_152409.log
+[LGBM-RESUME] after=111 rc=0 at 2026-07-31 15:43:33
+[LGBM-RESUME] before=111 at 2026-07-31 15:43:33
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_154333.log
+[LGBM-RESUME] after=111 rc=0 at 2026-07-31 15:44:07
+[LGBM-RESUME] before=111 at 2026-07-31 15:44:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_154407.log
+[LGBM-RESUME] after=111 rc=0 at 2026-07-31 15:45:51
+[LGBM-RESUME] before=111 at 2026-07-31 15:45:51
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_154551.log
+[LGBM-RESUME] after=111 rc=0 at 2026-07-31 15:46:28
+[LGBM-RESUME] before=111 at 2026-07-31 15:46:28
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_154628.log
+[LGBM-RESUME] after=112 rc=0 at 2026-07-31 16:05:44
+[LGBM-RESUME] before=112 at 2026-07-31 16:05:44
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_160544.log
+[LGBM-RESUME] after=112 rc=0 at 2026-07-31 16:06:16
+[LGBM-RESUME] before=112 at 2026-07-31 16:06:16
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_160616.log
+[LGBM-RESUME] after=112 rc=0 at 2026-07-31 16:08:20
+[LGBM-RESUME] before=112 at 2026-07-31 16:08:20
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_160820.log
+[LGBM-RESUME] after=112 rc=0 at 2026-07-31 16:08:33
+[LGBM-RESUME] before=112 at 2026-07-31 16:08:33
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_160833.log
+[LGBM-RESUME] after=113 rc=0 at 2026-07-31 16:26:27
+[LGBM-RESUME] before=113 at 2026-07-31 16:26:27
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_162627.log
+[LGBM-RESUME] after=113 rc=0 at 2026-07-31 16:26:44
+[LGBM-RESUME] before=113 at 2026-07-31 16:26:44
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_162644.log
+[LGBM-RESUME] after=113 rc=0 at 2026-07-31 16:28:58
+[LGBM-RESUME] before=113 at 2026-07-31 16:28:58
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_162858.log
+[LGBM-RESUME] after=113 rc=0 at 2026-07-31 16:29:08
+[LGBM-RESUME] before=113 at 2026-07-31 16:29:08
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_162908.log
+[LGBM-RESUME] after=114 rc=0 at 2026-07-31 16:57:22
+[LGBM-RESUME] before=114 at 2026-07-31 16:57:22
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_165722.log
+[LGBM-RESUME] after=114 rc=0 at 2026-07-31 16:57:38
+[LGBM-RESUME] before=114 at 2026-07-31 16:57:38
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_165738.log
+[LGBM-RESUME] after=114 rc=0 at 2026-07-31 16:59:48
+[LGBM-RESUME] before=114 at 2026-07-31 16:59:48
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_165948.log
+[LGBM-RESUME] after=114 rc=0 at 2026-07-31 17:00:04
+[LGBM-RESUME] before=114 at 2026-07-31 17:00:04
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_170004.log
+[LGBM-RESUME] after=115 rc=0 at 2026-07-31 17:21:20
+[LGBM-RESUME] before=115 at 2026-07-31 17:21:20
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_172120.log
+[LGBM-RESUME] after=115 rc=0 at 2026-07-31 17:21:33
+[LGBM-RESUME] before=115 at 2026-07-31 17:21:33
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_172133.log
+[LGBM-RESUME] after=115 rc=0 at 2026-07-31 17:44:35
+[LGBM-RESUME] before=115 at 2026-07-31 17:44:35
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_174435.log
+[LGBM-RESUME] after=115 rc=0 at 2026-07-31 18:14:23
+[LGBM-RESUME] before=115 at 2026-07-31 18:14:23
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_181423.log
+[LGBM-RESUME] after=116 rc=0 at 2026-08-01 10:39:00
+[LGBM-RESUME] before=116 at 2026-08-01 10:39:00
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260801_103900.log
+[LGBM-RESUME] after=116 rc=0 at 2026-08-01 10:39:25
+[LGBM-RESUME] before=116 at 2026-08-01 10:39:25
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260801_103925.log
+[LGBM-RESUME] after=116 rc=0 at 2026-08-01 13:42:10
+[LGBM-RESUME] before=116 at 2026-08-01 13:42:10
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260801_134210.log
+[LGBM-RESUME] after=116 rc=0 at 2026-08-01 14:18:19
+[LGBM-RESUME] before=116 at 2026-08-01 14:18:19
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260801_141819.log
+[LGBM-RESUME] after=117 rc=0 at 2026-08-02 00:21:57
+[LGBM-RESUME] before=117 at 2026-08-02 00:21:57
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260802_002157.log
+[LGBM-RESUME] after=117 rc=0 at 2026-08-02 02:54:17
+[LGBM-RESUME] before=117 at 2026-08-02 02:54:17
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260802_025417.log
+[LGBM-RESUME] after=117 rc=0 at 2026-08-02 02:54:36
+[LGBM-RESUME] before=117 at 2026-08-02 02:54:36
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260802_025436.log
+[LGBM-RESUME] after=117 rc=0 at 2026-08-02 08:44:30
+[LGBM-RESUME] before=117 at 2026-08-02 08:44:30
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260802_084430.log
+[LGBM-RESUME] after=118 rc=0 at 2026-08-03 08:36:53
+[LGBM-RESUME] before=118 at 2026-08-03 08:36:53
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_083653.log
+[LGBM-RESUME] after=118 rc=0 at 2026-08-03 08:53:54
+[LGBM-RESUME] before=118 at 2026-08-03 08:53:54
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_085354.log
+[LGBM-RESUME] after=118 rc=0 at 2026-08-03 09:23:44
+[LGBM-RESUME] before=118 at 2026-08-03 09:23:44
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_092344.log
+[LGBM-RESUME] after=118 rc=0 at 2026-08-03 09:24:28
+[LGBM-RESUME] before=118 at 2026-08-03 09:24:28
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_092428.log
+[LGBM-RESUME] after=119 rc=0 at 2026-08-03 09:57:31
+[LGBM-RESUME] before=119 at 2026-08-03 09:57:31
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_095731.log
+[LGBM-RESUME] after=119 rc=0 at 2026-08-03 09:57:57
+[LGBM-RESUME] before=119 at 2026-08-03 09:57:57
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_095757.log
+[LGBM-RESUME] after=119 rc=0 at 2026-08-03 09:58:07
+[LGBM-RESUME] before=119 at 2026-08-03 09:58:07
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_095807.log
+[LGBM-RESUME] after=119 rc=0 at 2026-08-03 09:58:14
+[LGBM-RESUME] before=119 at 2026-08-03 09:58:14
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_095814.log
+[LGBM-RESUME] start=2026-08-03 10:04:02 mode=cluster
+[LGBM-RESUME] n_households=348 n_iter=60 cv_splits=5
+[LGBM-RESUME] one completed trial is checkpointed before the next run starts
+[LGBM-RESUME] before=119 at 2026-08-03 10:04:02
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_100402.log
+[LGBM-RESUME] after=120 rc=0 at 2026-08-03 10:50:57
+[LGBM-RESUME] train complete for mode=cluster; running finalize
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_105057.log
+[LGBM-RESUME] done mode=cluster at 2026-08-03 10:51:04
+[LGBM-RESUME] after=120 rc=0 at 2026-08-03 11:00:26
+[LGBM-RESUME] train complete for mode=cluster; running finalize
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_110026.log
+[LGBM-RESUME] done mode=cluster at 2026-08-03 11:00:41
+[LGBM-RESUME] after=120 rc=0 at 2026-08-03 11:01:32
+src/run_stage6_lgbm_resumable.sh: line 126: unexpected EOF while looking for matching `"'
+[LGBM-RESUME] after=120 rc=0 at 2026-08-03 11:03:23
+[LGBM-RESUME] train complete for mode=cluster; running finalize
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_110323.log
+[LGBM-RESUME] done mode=cluster at 2026-08-03 11:03:30
+[LGBM-RESUME] after=120 rc=0 at 2026-08-03 11:03:59
+[LGBM-RESUME] train complete for mode=cluster; running finalize
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260803_110359.log
+[LGBM-RESUME] done mode=cluster at 2026-08-03 11:04:01

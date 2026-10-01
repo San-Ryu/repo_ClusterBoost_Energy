@@ -1,0 +1,20 @@
+[STAGE6-PANEL] start=2026-07-31 15:43:33
+[STAGE6-PANEL] step=train models=lightgbm
+[STAGE6-PANEL] panel_mode=cluster
+[STAGE6-PANEL] n_households=348 n_iter=60 cv_splits=5
+[STAGE6-PANEL] max_groups_per_run=1 max_trials_per_run=1
+[STAGE6-PANEL] target_mode=level scoring=r2
+[STAGE6-PANEL] cluster_dir=/Users/labq_s.h.ryu/data/KIER_4_Clustered/seasonal_naive/kmeans cluster_resolution=10MIN
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260731_154333.log
+============================================================
+[STAGE6-PANEL] Running LightGBM at 2026-07-31 15:43:33
+============================================================
+[PLAN] LightGBM: panel_mode=cluster groups=2 households=348 done_groups=1
+  plan: results/stage6_panel_cluster/ml_lightgbm_cluster_checkpoint_plan.csv
+[TRAIN] pending_groups=1
+  [GROUP] (1/1) K1 households=129
+    panel: train_rows=10554006 test_rows=1885335 memory=3.22GB
+    trials: done=51 run_now=1 total=60
+      trial 52/60 (1/1) score=-25.57053 time=20.8m
+    partial K1: 52/60 trials complete
+[STAGE6-PANEL] end=2026-07-31 16:05:44 status=success

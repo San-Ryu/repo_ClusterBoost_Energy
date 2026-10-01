@@ -1,0 +1,2 @@
+target_household,n_total_households,n_peer_households,n_weather_features,n_input_features,target_shift,has_target_in_features,first_timestamp,last_timestamp,n_rows,model,grid_preset,param_combos,cv_splits,cv_type,power_path,weather_path
+ELEC_1-8-4,348,347,17,364,0,False,2024-05-31 16:00:00,2024-06-05 15:00:00,120,Legacy1DCNNLSTM,smoke,1,5,kfold,/Users/labq_s.h.ryu/data/KIER_3_Temporal_Resolution/seasonal_naive/KIER_USAGE_ELEC_INST_INTERP_1H.csv,/Users/labq_s.h.ryu/data/KMA_ASOS/119_SUWON/ASOS_119_2010-2024_HR.csv

@@ -1,0 +1,38 @@
+[
+  {
+    "target_household": "ELEC_3-3-6",
+    "n_total_households": 348,
+    "n_peer_households": 347,
+    "n_weather_features": 17,
+    "n_input_features": 364,
+    "target_shift": 0,
+    "has_target_in_features": false,
+    "first_timestamp": "2022-07-17 23:00:00",
+    "last_timestamp": "2024-06-05 15:00:00",
+    "n_rows": 16261
+  },
+  {
+    "target_household": "ELEC_1-8-3",
+    "n_total_households": 348,
+    "n_peer_households": 347,
+    "n_weather_features": 17,
+    "n_input_features": 364,
+    "target_shift": 0,
+    "has_target_in_features": false,
+    "first_timestamp": "2022-07-17 23:00:00",
+    "last_timestamp": "2024-06-05 15:00:00",
+    "n_rows": 16261
+  },
+  {
+    "target_household": "ELEC_3-10-5",
+    "n_total_households": 348,
+    "n_peer_households": 347,
+    "n_weather_features": 17,
+    "n_input_features": 364,
+    "target_shift": 0,
+    "has_target_in_features": false,
+    "first_timestamp": "2022-07-17 23:00:00",
+    "last_timestamp": "2024-06-05 15:00:00",
+    "n_rows": 16261
+  }
+]

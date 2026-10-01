@@ -249,7 +249,7 @@ def safe_subset_metrics(
     scale: float,
 ) -> dict[str, float]:
     if int(mask.sum()) == 0:
-        return {"MAE": np.nan, "RMSE": np.nan, "MAPE": np.nan, "SMAPE": np.nan, "R2": np.nan, "MASE": np.nan}
+        return {"MAE": np.nan, "MSE": np.nan, "RMSE": np.nan, "MAPE": np.nan, "SMAPE": np.nan, "R2": np.nan, "MASE": np.nan}
     return compute_scaled_metrics(y_true[mask], y_pred[mask], scale)
 
 
@@ -372,16 +372,19 @@ def write_summary(detail_path: Path, summary_path: Path, model: str, planned: in
         raise ValueError(f"No detail rows found: {detail_path}")
     metric_cols = [
         "MAE",
+        "MSE",
         "RMSE",
         "MAPE",
         "SMAPE",
         "R2",
         "MASE",
         "peak_MAE",
+        "peak_MSE",
         "peak_RMSE",
         "peak_R2",
         "peak_MASE",
         "nonpeak_MAE",
+        "nonpeak_MSE",
         "nonpeak_RMSE",
         "nonpeak_R2",
         "nonpeak_MASE",

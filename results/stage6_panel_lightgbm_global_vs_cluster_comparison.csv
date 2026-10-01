@@ -1,0 +1,8 @@
+metric,global,cluster,cluster_minus_global,winner
+MAE_mean,0.0204,0.0204,0.0,tie
+MSE_mean,0.0075,0.0075,0.0,tie
+RMSE_mean,0.0805,0.0804,-0.00010000000000000286,cluster
+SMAPE_mean,34.7053,34.7292,0.02389999999999759,global
+R2_mean,0.1617,0.1635,0.001799999999999996,cluster
+MASE_mean,0.5396,0.5435,0.0039000000000000146,global
+rmse_improvement_vs_best_naive_mean,0.258,0.2587,0.0006999999999999784,cluster

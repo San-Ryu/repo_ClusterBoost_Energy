@@ -1,0 +1,35 @@
+{
+  "args": {
+    "model": "TCN",
+    "resolution": "1H",
+    "interp_method": "seasonal_naive",
+    "data_path": "",
+    "weather_path": "",
+    "weather_station": "119",
+    "target_households": "",
+    "n_target_households": 1,
+    "target_shift": 0,
+    "max_rows": 120,
+    "cv_splits": 5,
+    "cv_type": "kfold",
+    "grid_preset": "smoke",
+    "param_grid_json": "",
+    "max_param_combos": 0,
+    "seed": 42,
+    "fit_verbose": 0,
+    "results_dir": "results/dl_peer_grid_cv_smoke_all",
+    "step": "all",
+    "no_resume": true,
+    "max_targets_per_run": 0
+  },
+  "param_grid": [
+    {
+      "batch_size": 256,
+      "epochs": 1,
+      "learning_rate": 0.001,
+      "loss": "huber",
+      "patience": 1,
+      "seq_len": 3
+    }
+  ]
+}

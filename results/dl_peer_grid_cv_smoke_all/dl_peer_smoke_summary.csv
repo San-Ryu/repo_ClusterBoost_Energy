@@ -1,0 +1,8 @@
+model,target_household,cv_splits,grid_combos,seq_len,epochs_requested,batch_size,learning_rate,MAE_mean,RMSE_mean,R2_mean,fold_metric_rows,feature_contract
+1D_CNN_LSTM,ELEC_1-8-4,5,1,3,1,256,0.001,0.1188371509313583,0.2016902395703783,-0.6885936975479126,5,dl_peer_1d_cnn_lstm_feature_contract.json
+GRU,ELEC_1-8-4,5,1,3,1,256,0.001,0.5115880131721496,0.6200064340729365,-35.48660678863526,5,dl_peer_gru_feature_contract.json
+Legacy1DCNNLSTM,ELEC_1-8-4,5,1,3,1,256,0.001,0.1245427437126636,0.2058194076408823,-0.9912605285644532,5,dl_peer_legacy1dcnnlstm_feature_contract.json
+Legacy1DCNNSeq2Seq,ELEC_1-8-4,5,1,3,1,256,0.001,0.1277778767049312,0.2075811188077528,-0.9176485776901244,5,dl_peer_legacy1dcnnseq2seq_feature_contract.json
+RetNet,ELEC_1-8-4,5,1,3,1,256,0.001,0.606252646446228,0.7684707592349355,-73.06148042678834,5,dl_peer_retnet_feature_contract.json
+TCN,ELEC_1-8-4,5,1,3,1,256,0.001,1.761723268032074,2.118564611569849,-1102.167165565491,5,dl_peer_tcn_feature_contract.json
+Transformer,ELEC_1-8-4,5,1,3,1,256,0.001,0.6769828557968139,0.8309404716384338,-100.8777150630951,5,dl_peer_transformer_feature_contract.json

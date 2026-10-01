@@ -1,0 +1,2 @@
+model,target_household,combo_idx,seq_len,epochs_requested,batch_size,patience,learning_rate,loss,MAE_mean,MAE_std,MAPE_mean,MAPE_std,MSE_mean,MSE_std,RMSE_mean,RMSE_std,R2_mean,R2_std,elapsed_s_mean,elapsed_s_std,n_epochs_mean,n_epochs_std,selected_by
+GRU,ELEC_1-8-4,1,3,1,256,1,0.001,huber,0.5115880131721496,0.11389833693276227,322.67805576324463,41.41470007038015,0.39837010502815245,0.1579718269566165,0.6200064340729365,0.13210851002260313,-35.48660678863526,34.23369083217004,1.4048,0.42105011578195767,1.0,0.0,min_RMSE_then_max_R2

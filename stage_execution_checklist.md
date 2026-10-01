@@ -202,32 +202,107 @@ python core/data_09_cluster_label.py
 
 ---
 
-## 6) Stage 6 — 모델 학습 및 성능 비교 (TCN 포함)
+## 6) Stage 6 — Panel 기반 ML checkpoint 실험 및 성능 비교
 
-현재 모델 비교는 노트북 실행 중심이다.
+현재 Stage 6의 핵심 비교는 세대별 local model이 아니라 panel 기반 비교다.
+대조군과 실험군은 모두 시간순 split을 사용하며, shuffle은 사용하지 않는다.
 
-### 6-1) ML 비교
-- 대상: CatBoost, XGBoost, LightGBM, DecisionTree, RandomForest
-- 예상 소요: **30분~3시간**
+### 현재 운영 기준
+
+- Repository: `/Users/labq_s.h.ryu/repo_ClusterBoost_Energy`
+- Shared data root: `/Users/labq_s.h.ryu/data`
+- 대조군: `STAGE6_PANEL_MODE=global`
+  - 전체 348개 세대의 train 기간 데이터를 하나의 panel dataset으로 학습
+  - test 기간에서 각 세대별 예측값과 성능을 산출
+- 실험군: `STAGE6_PANEL_MODE=cluster`
+  - cluster별 train 기간 데이터를 학습
+  - 해당 cluster 예하 세대별 예측값과 성능을 산출
+- Target: `level` 기본값
+- Scoring: `r2`
+- HPO: group 단위 checkpoint
+  - global: 모델별 1회 search
+  - cluster: 모델별 cluster 단위 search
+- 검증: `TimeSeriesSplit`, `shuffle=False`
+- Metric: `MAE`, `MAPE`, `MSE`, `RMSE`, `SMAPE`, `R2`, `MASE`, best naive 대비 RMSE 개선률
+- 빠른 검증 모델: `catboost,lightgbm,xgboost`
+- 최종 ML 비교 모델: `catboost,lightgbm,xgboost,decisiontree,randomforest`
+  - DecisionTree/RandomForest는 절대 성능이 낮더라도 이전 연구에서 개선률 해석에 필요하므로 최종 비교에는 포함한다.
+- DL 모델은 같은 panel/global-vs-cluster 의미로 별도 runner를 추가한 뒤 비교한다. 기존 local DL runner 결과와 직접 비교하지 않는다.
+
+### 6-0) 사전 확인
 
 ```bash
+cd "/Users/labq_s.h.ryu/repo_ClusterBoost_Energy"
 source .venv/bin/activate
-jupyter nbconvert --to notebook --execute --inplace \
-  src/model_ml_02_comparison.ipynb
+screen -ls
 ```
 
-### 6-2) DL 비교
-- 대상: 1D-CNN LSTM, GRU, Transformer, **TCN**, RetNet
-- 예상 소요: **2~12시간** (GPU 유무 영향 큼)
+### 6-1) 빠른 대조군 검증: global panel / 3개 ML
 
 ```bash
-source .venv/bin/activate
-jupyter nbconvert --to notebook --execute --inplace \
-  src/model_dl_02_comparison.ipynb
+cd "/Users/labq_s.h.ryu/repo_ClusterBoost_Energy"
+STAGE6_PANEL_MODE=global STAGE6_MODELS=catboost,lightgbm,xgboost STAGE6_STEP=all STAGE6_N_HOUSEHOLDS=348 STAGE6_N_ITER=60 STAGE6_CV_SPLITS=5 STAGE6_MAX_GROUPS_PER_RUN=1 STAGE6_MAX_TRIALS_PER_RUN=0 TARGET_MODE=level SCORING=r2 STAGE6_EXTRA_FLAGS="--results-dir results/stage6_panel_global --checkpoint-dir results/stage6_panel_global/checkpoints --predictions-dir results/stage6_panel_global/predictions" bash src/run_stage6_panel.sh
 ```
+
+### 6-2) 빠른 실험군 검증: cluster panel / 3개 ML
+
+```bash
+cd "/Users/labq_s.h.ryu/repo_ClusterBoost_Energy"
+STAGE6_PANEL_MODE=cluster STAGE6_MODELS=catboost,lightgbm,xgboost STAGE6_STEP=all STAGE6_N_HOUSEHOLDS=348 STAGE6_N_ITER=60 STAGE6_CV_SPLITS=5 STAGE6_MAX_GROUPS_PER_RUN=1 STAGE6_MAX_TRIALS_PER_RUN=0 TARGET_MODE=level SCORING=r2 STAGE6_EXTRA_FLAGS="--results-dir results/stage6_panel_cluster --checkpoint-dir results/stage6_panel_cluster/checkpoints --predictions-dir results/stage6_panel_cluster/predictions" bash src/run_stage6_panel.sh
+```
+
+### 6-3) 최종 ML 비교
+
+빠른 검증에서 이전 연구 수준의 성능 범위가 회복되는지 확인한 뒤, 최종 ML 비교에는 5개 모델을 모두 포함한다.
+
+```bash
+# global control
+STAGE6_PANEL_MODE=global STAGE6_MODELS=catboost,lightgbm,xgboost,decisiontree,randomforest \
+STAGE6_STEP=all STAGE6_N_HOUSEHOLDS=348 STAGE6_N_ITER=120 STAGE6_CV_SPLITS=5 \
+STAGE6_MAX_GROUPS_PER_RUN=1 STAGE6_MAX_TRIALS_PER_RUN=0 \
+TARGET_MODE=level SCORING=r2 \
+STAGE6_EXTRA_FLAGS="--results-dir results/stage6_panel_global --checkpoint-dir results/stage6_panel_global/checkpoints --predictions-dir results/stage6_panel_global/predictions" \
+bash src/run_stage6_panel.sh
+
+# cluster experiment
+STAGE6_PANEL_MODE=cluster STAGE6_MODELS=catboost,lightgbm,xgboost,decisiontree,randomforest \
+STAGE6_STEP=all STAGE6_N_HOUSEHOLDS=348 STAGE6_N_ITER=120 STAGE6_CV_SPLITS=5 \
+STAGE6_MAX_GROUPS_PER_RUN=1 STAGE6_MAX_TRIALS_PER_RUN=0 \
+TARGET_MODE=level SCORING=r2 \
+STAGE6_EXTRA_FLAGS="--results-dir results/stage6_panel_cluster --checkpoint-dir results/stage6_panel_cluster/checkpoints --predictions-dir results/stage6_panel_cluster/predictions" \
+bash src/run_stage6_panel.sh
+```
+
+### 진행 확인
+
+```bash
+screen -ls
+tail -f results/runtime/stage6_panel_*.log
+find results/stage6_panel_global/checkpoints -name '*_trials.csv' | wc -l
+find results/stage6_panel_cluster/checkpoints -name '*_trials.csv' | wc -l
+```
+
+### 현재 체크포인트 스냅샷 (2026-07-16 KST)
+
+- [x] 기존 single-household 의미의 `stage6_all_households` 프로세스 종료
+- [x] 기존 single-household 의미의 Stage 6 결과/로그 폐기
+- [x] 새 ML runner 추가: `src/model_ml_panel_checkpointed.py`
+- [x] 새 실행 wrapper 추가: `src/run_stage6_panel.sh`
+- [x] 기존 ML/DL metric에 `MSE` 추가
+- [x] smoke 검증: LightGBM global panel 4세대 1 trial 성공
+- [x] smoke 검증: LightGBM cluster panel 4세대 1 trial 성공
+- [ ] global panel 348세대 / 3개 ML 빠른 검증
+- [ ] cluster panel 348세대 / 3개 ML 빠른 검증
+- [ ] 최종 ML 5개 모델 비교
+- [ ] panel 의미에 맞는 DL runner 추가 및 비교
 
 ### 완료 확인
-- [ ] `results/models/` 내 비교 결과 파일 생성
+
+- [ ] `results/stage6_panel_global/ml_<model>_global_detail.csv`
+- [ ] `results/stage6_panel_global/ml_<model>_global_summary.csv`
+- [ ] `results/stage6_panel_cluster/ml_<model>_cluster_detail.csv`
+- [ ] `results/stage6_panel_cluster/ml_<model>_cluster_summary.csv`
+- [ ] 대조군/실험군 성능 비교표 작성
 
 ---
 

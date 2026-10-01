@@ -1,0 +1,31 @@
+[STAGE6-PANEL] start=2026-07-20 13:11:47
+[STAGE6-PANEL] step=all models=lightgbm
+[STAGE6-PANEL] panel_mode=cluster
+[STAGE6-PANEL] n_households=64 n_iter=1 cv_splits=3
+[STAGE6-PANEL] max_groups_per_run=1 max_trials_per_run=1
+[STAGE6-PANEL] target_mode=level scoring=r2
+[STAGE6-PANEL] cluster_dir=/Users/labq_s.h.ryu/data/KIER_4_Clustered/seasonal_naive/kmeans cluster_resolution=10MIN
+[STAGE6-PANEL] log_file=results/runtime/stage6_panel_20260720_131147.log
+============================================================
+[STAGE6-PANEL] Running LightGBM at 2026-07-20 13:11:47
+============================================================
+[PLAN] LightGBM: panel_mode=cluster groups=2 households=64 done_groups=1
+  plan: results/stage6_panel_probe_global/ml_lightgbm_cluster_checkpoint_plan.csv
+[TRAIN] pending_groups=1
+  [GROUP] (1/1) K1 households=24
+    trials: done=0 run_now=1 total=1
+/Users/labq_s.h.ryu/repo_ClusterBoost_Energy/.venv/lib/python3.9/site-packages/joblib/externals/loky/backend/context.py:131: UserWarning: Could not find the number of physical cores for the following reason:
+invalid literal for int() with base 10: ''
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+  File "/Users/labq_s.h.ryu/repo_ClusterBoost_Energy/.venv/lib/python3.9/site-packages/joblib/externals/loky/backend/context.py", line 249, in _count_physical_cores
+    cpu_count_physical = _count_physical_cores_darwin()
+  File "/Users/labq_s.h.ryu/repo_ClusterBoost_Energy/.venv/lib/python3.9/site-packages/joblib/externals/loky/backend/context.py", line 318, in _count_physical_cores_darwin
+    return int(cpu_info)
+      trial 1/1 (1/1) score=0.43155 time=1.1m
+    done K1: households=24 best_trial=1 time=1.7m
+[DONE] model=LightGBM panel_mode=cluster
+  detail : results/stage6_panel_probe_global/ml_lightgbm_cluster_detail.csv
+  summary: results/stage6_panel_probe_global/ml_lightgbm_cluster_summary.csv
+  params : results/stage6_panel_probe_global/ml_lightgbm_cluster_best_params.json
+[STAGE6-PANEL] end=2026-07-20 13:13:35 status=success

@@ -1,0 +1,2 @@
+model,target_household,combo_idx,seq_len,epochs_requested,batch_size,patience,learning_rate,loss,MAE_mean,MAE_std,MAPE_mean,MAPE_std,MSE_mean,MSE_std,RMSE_mean,RMSE_std,R2_mean,R2_std,elapsed_s_mean,elapsed_s_std,n_epochs_mean,n_epochs_std
+Legacy1DCNNSeq2Seq,ELEC_1-8-4,1,3,1,256,1,0.001,huber,0.1277778767049312,0.06246956767170829,46.88887000083923,12.260371464622274,0.05511638382449739,0.05210033029736812,0.20758111880775282,0.12260945589053822,-0.9176485776901245,0.4295530177339919,2.1348,0.10143569391491357,1.0,0.0

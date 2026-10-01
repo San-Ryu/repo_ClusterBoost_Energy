@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-08-10",
+  "created_in_project": "/Users/labq_s.h.ryu/repo_ClusterBoost_Energy",
+  "source_policy": "Read-only extraction from previous repository; no source files modified.",
+  "source_repository": "/Users/labq_s.h.ryu/repo_A_machine_learning_ensemble_framework_based_on_a_clustering_algorithm_for_improving_electric_power_consumption_performance",
+  "outputs": {
+    "results/reference_legacy_ml/ml02_xgb_1h_kfold10_fold_metrics.csv": {
+      "notebook": "/Users/labq_s.h.ryu/repo_A_machine_learning_ensemble_framework_based_on_a_clustering_algorithm_for_improving_electric_power_consumption_performance/Src_Energy_M02/M02-03_Model_ML-02_CV.ipynb",
+      "cell": 26,
+      "description": "XGB 10-fold printed metrics parsed from notebook output"
+    },
+    "results/reference_legacy_ml/ml02_xgb_1h_kfold10_summary.csv": {
+      "notebook": "/Users/labq_s.h.ryu/repo_A_machine_learning_ensemble_framework_based_on_a_clustering_algorithm_for_improving_electric_power_consumption_performance/Src_Energy_M02/M02-03_Model_ML-02_CV.ipynb",
+      "cell": 28,
+      "description": "XGB 10-fold average list_res parsed from notebook output"
+    },
+    "results/reference_legacy_ml/ml02_xgb_1h_kfold10_metric_history_long.csv": {
+      "notebook": "/Users/labq_s.h.ryu/repo_A_machine_learning_ensemble_framework_based_on_a_clustering_algorithm_for_improving_electric_power_consumption_performance/Src_Energy_M02/M02-03_Model_ML-02_CV.ipynb",
+      "cell": 27,
+      "description": "XGB 10-fold metric history list_hists parsed from notebook output"
+    },
+    "results/reference_legacy_ml/ml04_xgb_k2_1w_cluster_sum_predictions.csv": {
+      "notebook": "/Users/labq_s.h.ryu/repo_A_machine_learning_ensemble_framework_based_on_a_clustering_algorithm_for_improving_electric_power_consumption_performance/Src_Energy_M02/M02-03_Model_ML-04_CV_Comparison.ipynb",
+      "cell": 21,
+      "description": "Cluster-sum prediction array parsed from notebook output; actual values were not printed"
+    },
+    "results/reference_legacy_ml/ml04_xgb_k2_1w_cluster_sum_predictions_raw_output.txt": {
+      "notebook": "/Users/labq_s.h.ryu/repo_A_machine_learning_ensemble_framework_based_on_a_clustering_algorithm_for_improving_electric_power_consumption_performance/Src_Energy_M02/M02-03_Model_ML-04_CV_Comparison.ipynb",
+      "cell": 21,
+      "description": "Raw notebook cell output retained for audit"
+    }
+  },
+  "limitations": [
+    "No kf_result or ELEC_Comparison text files were present in the source repository working tree.",
+    "ML-04 actual arrays and individual cluster prediction arrays were commented out in notebook output; only cluster-sum predictions were extractable.",
+    "These files are reference copies, not rerun results from the current project."
+  ]
+}

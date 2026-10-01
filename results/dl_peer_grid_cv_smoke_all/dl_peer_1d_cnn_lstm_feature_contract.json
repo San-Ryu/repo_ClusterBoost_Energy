@@ -1,0 +1,14 @@
+[
+  {
+    "target_household": "ELEC_1-8-4",
+    "n_total_households": 348,
+    "n_peer_households": 347,
+    "n_weather_features": 17,
+    "n_input_features": 364,
+    "target_shift": 0,
+    "has_target_in_features": false,
+    "first_timestamp": "2024-05-31 16:00:00",
+    "last_timestamp": "2024-06-05 15:00:00",
+    "n_rows": 120
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "model": "LightGBM",
+  "panel_mode": "cluster",
+  "group_id": "K1",
+  "best_trial_index": 44,
+  "best_cv_score": 0.4691249071849281,
+  "best_params": {
+    "colsample_bytree": 0.6701321079557354,
+    "learning_rate": 0.007488359765603784,
+    "max_depth": 5,
+    "min_child_samples": 57,
+    "n_estimators": 540,
+    "num_leaves": 58,
+    "reg_alpha": 0.1731521605447004,
+    "reg_lambda": 0.2323369064698057,
+    "subsample": 0.8599094730571053
+  },
+  "updated_at": "2026-08-03T11:03:58"
+}

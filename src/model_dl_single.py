@@ -24,6 +24,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from core.project_paths import data_path
+from src.legacy_model_registry import DL_MODEL_NAMES, build_dl_model
 
 tf = None
 keras = None
@@ -104,182 +105,6 @@ def build_dataset_for_household(
     return X_tr, y_tr, X_va, y_va, X_te, y_te, prev_tr, prev_va, prev_te, scaler
 
 
-def build_1dcnn_lstm(n_features: int, seq_len: int, activation: str = "swish"):
-    ensure_tf()
-    inp = keras.Input(shape=(seq_len, n_features))
-    x = keras.layers.Conv1D(64, 3, padding="causal", activation=activation)(inp)
-    x = keras.layers.BatchNormalization()(x)
-    x = keras.layers.Conv1D(128, 3, padding="causal", activation=activation)(x)
-    x = keras.layers.BatchNormalization()(x)
-    x = keras.layers.LSTM(128, return_sequences=True, dropout=0.15)(x)
-    x = keras.layers.LSTM(64, return_sequences=False, dropout=0.15)(x)
-    x = keras.layers.Dense(32, activation=activation)(x)
-    out = keras.layers.Dense(1)(x)
-    return keras.Model(inp, out, name="1D_CNN_LSTM")
-
-
-def build_gru(n_features: int, seq_len: int):
-    ensure_tf()
-    inp = keras.Input(shape=(seq_len, n_features))
-    x = keras.layers.GRU(128, return_sequences=True, dropout=0.15)(inp)
-    x = keras.layers.LayerNormalization()(x)
-    x = keras.layers.GRU(64, return_sequences=False, dropout=0.15)(x)
-    x = keras.layers.Dense(32, activation="relu")(x)
-    out = keras.layers.Dense(1)(x)
-    return keras.Model(inp, out, name="GRU")
-
-
-def _pos_encoding(seq_len: int, d_model: int) -> tf.Tensor:
-    ensure_tf()
-    positions = np.arange(seq_len)[:, np.newaxis]
-    dims = np.arange(d_model)[np.newaxis, :]
-    angles = positions / np.power(10000.0, (2 * (dims // 2)) / d_model)
-    angles[:, 0::2] = np.sin(angles[:, 0::2])
-    angles[:, 1::2] = np.cos(angles[:, 1::2])
-    return tf.cast(angles[np.newaxis], dtype=tf.float32)
-
-
-def build_transformer(
-    n_features: int,
-    seq_len: int,
-    d_model: int = 64,
-    num_heads: int = 4,
-    ff_dim: int = 128,
-    num_layers: int = 2,
-    dropout: float = 0.1,
-):
-    ensure_tf()
-    inp = keras.Input(shape=(seq_len, n_features))
-    x = keras.layers.Dense(d_model)(inp)
-    x = x + _pos_encoding(seq_len, d_model)
-    x = keras.layers.Dropout(dropout)(x)
-    for _ in range(num_layers):
-        attn = keras.layers.MultiHeadAttention(
-            num_heads=num_heads,
-            key_dim=d_model // num_heads,
-            dropout=dropout,
-        )(x, x)
-        x = keras.layers.LayerNormalization(epsilon=1e-6)(x + attn)
-        ffn = keras.layers.Dense(ff_dim, activation="relu")(x)
-        ffn = keras.layers.Dense(d_model)(ffn)
-        ffn = keras.layers.Dropout(dropout)(ffn)
-        x = keras.layers.LayerNormalization(epsilon=1e-6)(x + ffn)
-    x = keras.layers.GlobalAveragePooling1D()(x)
-    x = keras.layers.Dense(32, activation="relu")(x)
-    out = keras.layers.Dense(1)(x)
-    return keras.Model(inp, out, name="Transformer")
-
-
-def _tcn_block(x, filters, kernel_size, dilation, dropout, activation):
-    ensure_tf()
-    residual = x
-    for _ in range(2):
-        x = keras.layers.Conv1D(
-            filters,
-            kernel_size,
-            padding="causal",
-            dilation_rate=dilation,
-        )(x)
-        x = keras.layers.LayerNormalization()(x)
-        x = keras.layers.Activation(activation)(x)
-        x = keras.layers.Dropout(dropout)(x)
-    if residual.shape[-1] != filters:
-        residual = keras.layers.Conv1D(filters, 1)(residual)
-    return keras.layers.Add()([x, residual])
-
-
-def build_tcn(
-    n_features: int,
-    seq_len: int,
-    nb_filters: int = 64,
-    kernel_size: int = 3,
-    dilations: list[int] | None = None,
-    dropout: float = 0.1,
-    activation: str = "relu",
-):
-    ensure_tf()
-    if dilations is None:
-        dilations = [1, 2, 4, 8, 16]
-    inp = keras.Input(shape=(seq_len, n_features))
-    x = inp
-    for d in dilations:
-        x = _tcn_block(x, nb_filters, kernel_size, d, dropout, activation)
-    x = keras.layers.GlobalAveragePooling1D()(x)
-    x = keras.layers.Dense(32, activation=activation)(x)
-    out = keras.layers.Dense(1)(x)
-    return keras.Model(inp, out, name="TCN")
-
-
-def build_retnet(
-    n_features: int,
-    seq_len: int,
-    d_model: int = 64,
-    num_heads: int = 4,
-    ff_dim: int = 128,
-    num_layers: int = 2,
-    dropout: float = 0.1,
-):
-    ensure_tf()
-    class _MultiScaleRetention(keras.layers.Layer):
-        def __init__(self, d_model: int, num_heads: int, **kwargs):
-            super().__init__(**kwargs)
-            assert d_model % num_heads == 0
-            self.num_heads = num_heads
-            self.head_dim = d_model // num_heads
-            self.d_model = d_model
-            self.gammas = [1.0 - 2.0 ** (-5 - h) for h in range(num_heads)]
-            self.W_Q = keras.layers.Dense(d_model, use_bias=False)
-            self.W_K = keras.layers.Dense(d_model, use_bias=False)
-            self.W_V = keras.layers.Dense(d_model, use_bias=False)
-            self.W_G = keras.layers.Dense(d_model)
-            self.W_O = keras.layers.Dense(d_model)
-            self.ln = keras.layers.LayerNormalization()
-
-        def call(self, x, training=None):
-            B, T = tf.shape(x)[0], tf.shape(x)[1]
-            Q, K, V = self.W_Q(x), self.W_K(x), self.W_V(x)
-            G = tf.nn.swish(self.W_G(x))
-
-            def split_heads(z):
-                z = tf.reshape(z, [B, T, self.num_heads, self.head_dim])
-                return tf.transpose(z, [0, 2, 1, 3])
-
-            Q, K, V = split_heads(Q), split_heads(K), split_heads(V)
-            idx = tf.cast(tf.range(T), tf.float32)
-            diff = idx[:, tf.newaxis] - idx[tf.newaxis, :]
-            causal = tf.cast(diff >= 0, tf.float32)
-            scale = tf.cast(self.head_dim, tf.float32) ** 0.5
-
-            heads_out = []
-            for h in range(self.num_heads):
-                D = tf.pow(self.gammas[h], tf.maximum(diff, 0.0)) * causal
-                scores = tf.matmul(Q[:, h], K[:, h], transpose_b=True) / scale
-                ret_h = tf.matmul(scores * D[tf.newaxis], V[:, h])
-                heads_out.append(ret_h)
-
-            ret = tf.stack(heads_out, axis=2)
-            ret = tf.reshape(ret, [B, T, self.d_model])
-            return self.W_O(self.ln(ret) * G)
-
-    inp = keras.Input(shape=(seq_len, n_features))
-    x = keras.layers.Dense(d_model)(inp)
-    x = keras.layers.Dropout(dropout)(x)
-    for _ in range(num_layers):
-        residual = x
-        ret = _MultiScaleRetention(d_model, num_heads)(x)
-        ret = keras.layers.Dropout(dropout)(ret)
-        x = keras.layers.LayerNormalization()(residual + ret)
-        residual = x
-        ffn = keras.layers.Dense(ff_dim, activation="gelu")(x)
-        ffn = keras.layers.Dense(d_model)(ffn)
-        ffn = keras.layers.Dropout(dropout)(ffn)
-        x = keras.layers.LayerNormalization()(residual + ffn)
-    x = keras.layers.GlobalAveragePooling1D()(x)
-    x = keras.layers.Dense(32, activation="gelu")(x)
-    out = keras.layers.Dense(1)(x)
-    return keras.Model(inp, out, name="RetNet")
-
-
 def mape(y_true, y_pred, eps: float = 1e-8) -> float:
     return float(np.mean(np.abs((y_true - y_pred) / (np.abs(y_true) + eps))) * 100)
 
@@ -287,9 +112,11 @@ def mape(y_true, y_pred, eps: float = 1e-8) -> float:
 def compute_metrics(y_true, y_pred, scaler):
     yt = scaler.inverse_transform(y_true.reshape(-1, 1)).ravel()
     yp = scaler.inverse_transform(y_pred.reshape(-1, 1)).ravel()
+    mse = float(mean_squared_error(yt, yp))
     return {
         "MAE": float(mean_absolute_error(yt, yp)),
-        "RMSE": float(np.sqrt(mean_squared_error(yt, yp))),
+        "MSE": mse,
+        "RMSE": float(np.sqrt(mse)),
         "MAPE": mape(yt, yp),
         "R2": float(r2_score(yt, yp)),
     }
@@ -336,7 +163,7 @@ def main() -> None:
     parser.add_argument(
         "--model",
         required=True,
-        choices=["1D_CNN_LSTM", "GRU", "Transformer", "TCN", "RetNet"],
+        choices=list(DL_MODEL_NAMES),
     )
     parser.add_argument(
         "--data-path",
@@ -402,13 +229,7 @@ def main() -> None:
     rng = np.random.default_rng(args.seed)
     selected_cols = list(rng.choice(complete_cols, size=min(args.n_households, len(complete_cols)), replace=False))
 
-    model_builders = {
-        "1D_CNN_LSTM": lambda nf, sl: build_1dcnn_lstm(nf, sl),
-        "GRU": lambda nf, sl: build_gru(nf, sl),
-        "Transformer": lambda nf, sl: build_transformer(nf, sl),
-        "TCN": lambda nf, sl: build_tcn(nf, sl),
-        "RetNet": lambda nf, sl: build_retnet(nf, sl),
-    }
+    model_builders = {name: lambda nf, sl, model_name=name: build_dl_model(model_name, nf, sl) for name in DL_MODEL_NAMES}
 
     probe = raw[selected_cols[0]]
     X_tr, y_tr, X_va, y_va, X_te, y_te, prev_tr, prev_va, prev_te, scaler = build_dataset_for_household(
@@ -527,7 +348,7 @@ def main() -> None:
     if len(results_df) == 0:
         raise ValueError("No detail rows found. Run train step first.")
 
-    summary = results_df[["MAE", "RMSE", "MAPE", "R2", "elapsed_s", "n_epochs"]].agg(["mean", "std"]).T
+    summary = results_df[["MAE", "MSE", "RMSE", "MAPE", "R2", "elapsed_s", "n_epochs"]].agg(["mean", "std"]).T
     summary.columns = ["mean", "std"]
 
     # ensure detail is up-to-date
@@ -538,6 +359,8 @@ def main() -> None:
                 "model": args.model,
                 "MAE_mean": round(summary.loc["MAE", "mean"], 4),
                 "MAE_std": round(summary.loc["MAE", "std"], 4),
+                "MSE_mean": round(summary.loc["MSE", "mean"], 4),
+                "MSE_std": round(summary.loc["MSE", "std"], 4),
                 "RMSE_mean": round(summary.loc["RMSE", "mean"], 4),
                 "RMSE_std": round(summary.loc["RMSE", "std"], 4),
                 "MAPE_mean": round(summary.loc["MAPE", "mean"], 2),

@@ -14,3 +14,9 @@ data/
 
 # 저작권 보호 논문 PDF
 paper/A machine learning ensemble framework based on a clustering algorithm for improving electric power consumption performance.pdf
+
+# 대용량 세대별 예측 CSV (재생성 가능, ~1.3GB)
+results/stage6_panel_*/predictions/
+
+# 로컬 Claude 설정
+.claude/settings.local.json

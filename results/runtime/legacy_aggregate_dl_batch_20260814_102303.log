@@ -1,0 +1,27 @@
+[DL-AGG-BATCH] start=2026-08-14 10:23:03
+[DL-AGG-BATCH] models=src/run_legacy_aggregate_dl_legacy_cnnlstm.py
+[DL-AGG-BATCH] log_file=results/runtime/legacy_aggregate_dl_batch_20260814_102303.log
+============================================================
+[DL-AGG] Running src/run_legacy_aggregate_dl_legacy_cnnlstm.py at 2026-08-14 10:23:03
+============================================================
+[
+  {
+    "dataset": "ALL",
+    "rows": 16260,
+    "features": 354,
+    "target_col": "ELEC_INST_SUM_ALL"
+  },
+  {
+    "dataset": "K0",
+    "rows": 16260,
+    "features": 224,
+    "target_col": "ELEC_INST_SUM_K0"
+  },
+  {
+    "dataset": "K1",
+    "rows": 16260,
+    "features": 136,
+    "target_col": "ELEC_INST_SUM_K1"
+  }
+]
+[DL-AGG-BATCH] end=2026-08-14 10:23:04 status=success

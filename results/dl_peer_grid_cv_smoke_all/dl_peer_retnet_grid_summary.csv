@@ -1,0 +1,2 @@
+model,target_household,combo_idx,seq_len,epochs_requested,batch_size,patience,learning_rate,loss,MAE_mean,MAE_std,MAPE_mean,MAPE_std,MSE_mean,MSE_std,RMSE_mean,RMSE_std,R2_mean,R2_std,elapsed_s_mean,elapsed_s_std,n_epochs_mean,n_epochs_std
+RetNet,ELEC_1-8-4,1,3,1,256,1,0.001,huber,0.606252646446228,0.2606755833499256,382.77785778045654,150.2716321538968,0.6844562739133835,0.6219123051757214,0.7684707592349355,0.34261670660204463,-73.06148042678834,88.39963259126921,1.2722000000000002,0.04293832786683706,1.0,0.0

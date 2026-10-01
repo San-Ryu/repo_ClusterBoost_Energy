@@ -1,7 +1,9 @@
 # Experiment Stage Checklist (Updated)
 
+Updated: 2026-08-11 KST
+
 KIER 에너지 예측 실험의 최신 실행 체크리스트다.  
-본 버전은 **Stage 6 모델 실행을 모델별 스크립트로 분리**한 흐름을 반영한다.
+본 버전은 **Stage 6 모델 실행을 모델별 스크립트로 분리**한 흐름과 논문 기준 재현용 **legacy aggregate ML/DL 비교 경로**를 함께 반영한다.
 
 ---
 
@@ -182,6 +184,15 @@ python core/data_09_cluster_label.py
 
 기존 노트북 일괄 실행 대신, 아래처럼 **모델별 스크립트 개별 실행** 권장.
 
+중요 구분:
+
+- 논문 기준 ML 성능표: `results/reference_legacy_ml/legacy_ml_comparison_performance_long.csv`, `results/reference_legacy_ml/legacy_ml_comparison_performance_wide.csv`
+- 논문 기준 재실험 경로: `src/legacy_aggregate_experiment.py`, `src/run_legacy_aggregate.sh`
+- 현재 Stage 6 panel 경로: `src/model_ml_panel_checkpointed.py`, `src/run_stage6_panel.sh`
+- 현재 single-household DL 경로: `src/model_dl_single.py`, `src/run_dl_*.py`
+
+현재 Stage 6 panel/DL-single 결과가 논문 ML보다 낮게 나오는 것은 자연스럽다. 이전 실험은 날씨/시간값과 다수 세대의 동시점 전력 사용량을 aggregate target 예측 입력으로 사용했고, 현재 panel/DL-single은 leakage를 피한 lag/sequence 기반 개별 세대 예측에 가깝다.
+
 ### 6-0) 배치 실행 스크립트 (에이전트 공용)
 
 세션 충돌 방지를 위해 ML/DL은 분리 실행한다.
@@ -213,6 +224,27 @@ bash src/stop_batches.sh dl
 
 ### 6-1) ML 모델별 실행
 
+#### 논문 기준 참조 ML 성능표
+
+스모크 실행으로 성능을 추정하지 않는다. 이전 참조 실험에서 저장된 성능표를 사용한다.
+
+```bash
+ls -lah results/reference_legacy_ml
+python - <<'PY'
+import pandas as pd
+wide = pd.read_csv("results/reference_legacy_ml/legacy_ml_comparison_performance_wide.csv")
+print(wide[["model", "condition", "control_R2", "exp2_sum_R2", "exp2_minus_control_R2"]].to_string(index=False))
+PY
+```
+
+완전성 기준:
+
+- `legacy_ml_comparison_performance_long.csv`: 90 rows
+- `legacy_ml_comparison_performance_wide.csv`: 20 rows
+- 모델: `CB`, `DT`, `LGBM`, `RF`, `XGB`
+- 조건: `K2M`, `K2W`, `K3M`, `K3W`
+- 그룹: 대조군, 실험군 01, 실험군 02
+
 #### 공통 실행기
 
 ```bash
@@ -228,6 +260,32 @@ python src/run_ml_decisiontree.py
 python src/run_ml_lightgbm.py
 python src/run_ml_randomforest.py
 python src/run_ml_xgboost.py
+```
+
+#### Legacy aggregate ML 모델별 실행 스크립트
+
+현재 데이터로 논문 실험 형상을 재실행할 때만 사용한다. 참조 성능표 자체는 위 CSV를 우선한다.
+
+```bash
+# CatBoost
+PYTHON_BIN=.venv/bin/python FAMILY=ml MODEL=CatBoost SCOPE=both RESOLUTION=1H \
+  RESULTS_DIR=results/legacy_aggregate_ml_catboost_1h bash src/run_legacy_aggregate.sh
+
+# DecisionTree
+PYTHON_BIN=.venv/bin/python FAMILY=ml MODEL=DecisionTree SCOPE=both RESOLUTION=1H \
+  RESULTS_DIR=results/legacy_aggregate_ml_decisiontree_1h bash src/run_legacy_aggregate.sh
+
+# LightGBM
+PYTHON_BIN=.venv/bin/python FAMILY=ml MODEL=LightGBM SCOPE=both RESOLUTION=1H \
+  RESULTS_DIR=results/legacy_aggregate_ml_lightgbm_1h bash src/run_legacy_aggregate.sh
+
+# RandomForest
+PYTHON_BIN=.venv/bin/python FAMILY=ml MODEL=RandomForest SCOPE=both RESOLUTION=1H \
+  RESULTS_DIR=results/legacy_aggregate_ml_randomforest_1h bash src/run_legacy_aggregate.sh
+
+# XGBoost
+PYTHON_BIN=.venv/bin/python FAMILY=ml MODEL=XGBoost SCOPE=both RESOLUTION=1H \
+  RESULTS_DIR=results/legacy_aggregate_ml_xgboost_1h bash src/run_legacy_aggregate.sh
 ```
 
 #### 파라미터 조정 예시
@@ -283,6 +341,9 @@ python src/diagnose_ml_leakage.py --n-households 30 --target-mode delta --fail-o
 #
 # 핵심 비교는 all_households vs cluster_households다.
 
+
+
+
 # 가장 안전한 장기 실행: 모델별/세대별/ trial별로 조금씩 저장
 STAGE6_MODELS=catboost,decisiontree,lightgbm,randomforest,xgboost \
 STAGE6_STEP=train \
@@ -304,6 +365,24 @@ bash src/run_stage6_checkpointed.sh
 # 완료된 detail 기준 summary 생성
 STAGE6_STEP=finalize bash src/run_stage6_checkpointed.sh
 ```
+
+<!-- STAGE6_CURRENT_STATUS_START -->
+
+#### 현재 운영 스냅샷 (2026-07-16 KST)
+
+- 기존 `all_households` / `cluster_households` feature-mode runner는 main comparison에서 폐기했다.
+- 폐기 사유: 세대별 local model + peer lag feature 구조라서, 의도한 “전체 panel 학습 후 세대 예측” 대조군 및 “cluster panel 학습 후 예하 세대 예측” 실험군과 의미가 다르다.
+- Active runner: `src/run_stage6_panel.sh`
+- Active ML implementation: `src/model_ml_panel_checkpointed.py`
+- 대조군: `STAGE6_PANEL_MODE=global`
+- 실험군: `STAGE6_PANEL_MODE=cluster`
+- 빠른 검증 모델: `catboost,lightgbm,xgboost`
+- 최종 ML 비교 모델: `catboost,lightgbm,xgboost,decisiontree,randomforest`
+- Metric: `MAE`, `MAPE`, `MSE`, `RMSE`, `SMAPE`, `R2`, `MASE`
+- Smoke 검증: LightGBM global/cluster panel 4세대 1 trial 성공
+
+<!-- STAGE6_CURRENT_STATUS_END -->
+
 
 중단:
 
@@ -350,6 +429,103 @@ bash src/run_ml_batch.sh
 ```
 
 ### 6-2) DL 모델별 실행 (TCN 포함)
+
+#### Peer-household GridSearch 5CV DL 실행
+
+논문 때 논의한 “날씨변수 + 타겟 제외 347개 세대” 입력 조건으로 타겟 세대를 예측하려면 아래 runner를 사용한다.
+
+- Main runner: `src/model_dl_peer_grid_cv.py`
+- Batch runner: `src/run_dl_peer_grid_batch.sh`
+- 결과 문서: `docs/dl_peer_grid_cv_experiment.md`
+- Smoke 결과: `results/dl_peer_grid_cv_smoke_all/dl_peer_smoke_summary.csv`
+
+입력 검증 조건:
+
+- 전력 세대 컬럼 `348`
+- 입력 peer 세대 컬럼 `347`
+- 날씨 변수 `17`
+- 총 입력 변수 `364`
+- 타겟 세대 컬럼은 입력에서 제외
+
+전체 DL 모델 smoke:
+
+```bash
+PYTHONPYCACHEPREFIX=/tmp/clusterboost_pycache DL_PEER_MODELS=all PYTHON_BIN=.venv/bin/python \
+  bash src/run_dl_peer_grid_batch.sh \
+  --grid-preset smoke \
+  --max-rows 120 \
+  --n-target-households 1 \
+  --cv-splits 5 \
+  --cv-type kfold \
+  --fit-verbose 0 \
+  --results-dir results/dl_peer_grid_cv_smoke_all \
+  --no-resume
+```
+
+모델별 실행 스크립트:
+
+```bash
+python src/run_dl_peer_legacy_cnnlstm.py --grid-preset small --cv-splits 5
+python src/run_dl_peer_legacy_seq2seq.py --grid-preset small --cv-splits 5
+python src/run_dl_peer_cnnlstm.py --grid-preset small --cv-splits 5
+python src/run_dl_peer_gru.py --grid-preset small --cv-splits 5
+python src/run_dl_peer_transformer.py --grid-preset small --cv-splits 5
+python src/run_dl_peer_tcn.py --grid-preset small --cv-splits 5
+python src/run_dl_peer_retnet.py --grid-preset small --cv-splits 5
+```
+
+Grid preset:
+
+- `smoke`: 1 combo, 1 epoch, 실행성/계약 검증용
+- `small`: 8 combos, 기본 탐색용
+- `paper`: 48 combos, 장기 탐색용
+
+#### Legacy aggregate DL 실행 원칙
+
+논문 ML과 같은 단위로 DL을 비교하려면 single-household runner가 아니라 aggregate runner를 사용한다.
+
+- `ALL`: 대조군
+- `K*`: 실험군 01, 군집별 직접 예측
+- `cluster_ensemble`: 실험군 02, 모든 군집 예측 합산
+
+계획 확인:
+
+```bash
+python src/run_legacy_aggregate_dl_legacy_cnnlstm.py --step plan
+```
+
+Legacy aggregate DL 모델별 실행 스크립트:
+
+```bash
+# Legacy CNN-LSTM
+EPOCHS=200 SEQ_LEN=3 python src/run_legacy_aggregate_dl_legacy_cnnlstm.py
+
+# Legacy Seq2Seq
+EPOCHS=200 SEQ_LEN=3 python src/run_legacy_aggregate_dl_legacy_seq2seq.py
+
+# Current CNN-LSTM
+EPOCHS=200 SEQ_LEN=3 python src/run_legacy_aggregate_dl_cnnlstm.py
+
+# GRU
+EPOCHS=200 SEQ_LEN=3 python src/run_legacy_aggregate_dl_gru.py
+
+# Transformer
+EPOCHS=200 SEQ_LEN=3 python src/run_legacy_aggregate_dl_transformer.py
+
+# TCN
+EPOCHS=200 SEQ_LEN=3 python src/run_legacy_aggregate_dl_tcn.py
+
+# RetNet
+EPOCHS=200 SEQ_LEN=3 python src/run_legacy_aggregate_dl_retnet.py
+```
+
+Batch:
+
+```bash
+bash src/run_legacy_aggregate_dl_batch.sh --step plan
+DL_AGG_MODELS=legacy_cnnlstm,tcn EPOCHS=200 SEQ_LEN=3 \
+  bash src/run_legacy_aggregate_dl_batch.sh
+```
 
 #### 공통 실행 템플릿 (복붙용)
 
@@ -427,6 +603,23 @@ DL_MODELS=gru,tcn bash src/run_dl_batch.sh
 ```
 
 ### Stage 6 결과 파일
+
+<!-- STAGE6_RESULT_PATHS_START -->
+
+현재 checkpoint 기반 Stage 6 결과 파일:
+
+- Control (`all_households`):
+  - `results/stage6_all_households/ml_<model>_all_households_detail.csv`
+  - `results/stage6_all_households/ml_<model>_all_households_summary.csv`
+  - `results/stage6_all_households/checkpoints/<model>/all_households/<household>_trials.csv`
+  - `results/stage6_all_households/predictions/<model>/all_households/<household>_predictions.csv`
+- Experiment (`cluster_households`):
+  - `results/stage6_cluster_households/ml_<model>_cluster_households_detail.csv`
+  - `results/stage6_cluster_households/ml_<model>_cluster_households_summary.csv`
+  - `results/stage6_cluster_households/checkpoints/<model>/cluster_households/<household>_trials.csv`
+  - `results/stage6_cluster_households/predictions/<model>/cluster_households/<household>_predictions.csv`
+
+<!-- STAGE6_RESULT_PATHS_END -->
 
 - ML:
   - `results/models/ml_<model>_detail.csv`

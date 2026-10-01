@@ -10,8 +10,12 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "${ROOT_DIR}"
 
-if [[ ! -f ".venv-dl/bin/activate" ]]; then
-  echo "[ERROR] .venv-dl not found: ${ROOT_DIR}/.venv-dl/bin/activate" >&2
+if [[ -x ".venv-dl/bin/python" ]]; then
+  DL_BATCH_PYTHON=".venv-dl/bin/python"
+elif [[ -x ".venv/bin/python" ]]; then
+  DL_BATCH_PYTHON=".venv/bin/python"
+else
+  echo "[ERROR] No runnable DL Python found. Expected .venv-dl/bin/python or .venv/bin/python" >&2
   exit 2
 fi
 
@@ -34,7 +38,8 @@ cleanup() {
   rm -f "${PID_FILE}" 2>/dev/null || true
 }
 trap cleanup EXIT INT TERM
-exec > >(tee -a "${LOG_FILE}") 2>&1
+echo "[DL-BATCH] log_file=${LOG_FILE}"
+exec >> "${LOG_FILE}" 2>&1
 
 TARGET_MODE="${TARGET_MODE:-delta}"
 DL_STEP="${DL_STEP:-train}"
@@ -49,6 +54,8 @@ DL_EXTRA_FLAGS="${DL_EXTRA_FLAGS:-}"
 DL_MODELS="${DL_MODELS:-all}"
 
 all_dl_scripts=(
+  src/run_dl_legacy_cnnlstm.py
+  src/run_dl_legacy_seq2seq.py
   src/run_dl_cnnlstm.py
   src/run_dl_gru.py
   src/run_dl_transformer.py
@@ -63,6 +70,8 @@ else
   IFS=',' read -r -a picked <<< "${DL_MODELS}"
   for m in "${picked[@]}"; do
     case "${m}" in
+      legacy_cnnlstm) candidate="src/run_dl_legacy_cnnlstm.py" ;;
+      legacy_seq2seq) candidate="src/run_dl_legacy_seq2seq.py" ;;
       cnnlstm) candidate="src/run_dl_cnnlstm.py" ;;
       gru) candidate="src/run_dl_gru.py" ;;
       transformer) candidate="src/run_dl_transformer.py" ;;
@@ -70,7 +79,7 @@ else
       retnet) candidate="src/run_dl_retnet.py" ;;
       *)
         candidate=""
-        echo "[DL-BATCH][WARN] unknown model key: ${m} (expected cnnlstm|gru|transformer|tcn|retnet)"
+        echo "[DL-BATCH][WARN] unknown model key: ${m} (expected legacy_cnnlstm|legacy_seq2seq|cnnlstm|gru|transformer|tcn|retnet)"
         ;;
     esac
     if [[ -n "${candidate}" ]] && [[ -f "${candidate}" ]]; then
@@ -90,11 +99,10 @@ echo "[DL-BATCH] step=${DL_STEP} target_mode=${TARGET_MODE}"
 echo "[DL-BATCH] n_households=${DL_N_HOUSEHOLDS} epochs=${DL_EPOCHS} patience=${DL_PATIENCE} seq_len=${DL_SEQ_LEN}"
 echo "[DL-BATCH] batch_size=${DL_BATCH_SIZE} max_households_per_run=${DL_MAX_HOUSEHOLDS_PER_RUN} fit_verbose=${DL_FIT_VERBOSE}"
 echo "[DL-BATCH] models=${DL_SCRIPTS[*]}"
+echo "[DL-BATCH] python=${DL_BATCH_PYTHON}"
 echo "[DL-BATCH] log_file=${LOG_FILE}"
 
 (
-  # shellcheck disable=SC1091
-  source .venv-dl/bin/activate
   export PYTHONUNBUFFERED=1
 
   for script in "${DL_SCRIPTS[@]}"; do
@@ -102,7 +110,7 @@ echo "[DL-BATCH] log_file=${LOG_FILE}"
     echo "[DL] Running ${script} at $(date "+%Y-%m-%d %H:%M:%S")"
     echo "============================================================"
     # DL_EXTRA_FLAGS is optional for flags like --no-resume
-    if ! python -u "${script}" \
+    if ! "${DL_BATCH_PYTHON}" -u "${script}" \
       --step "${DL_STEP}" \
       --n-households "${DL_N_HOUSEHOLDS}" \
       --epochs "${DL_EPOCHS}" \

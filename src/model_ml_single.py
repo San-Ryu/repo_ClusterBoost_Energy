@@ -52,9 +52,11 @@ def smape(y_true, y_pred, eps: float = 1e-8) -> float:
 
 
 def compute_metrics(y_true, y_pred) -> dict[str, float]:
+    mse = float(mean_squared_error(y_true, y_pred))
     return {
         "MAE": float(mean_absolute_error(y_true, y_pred)),
-        "RMSE": float(np.sqrt(mean_squared_error(y_true, y_pred))),
+        "MSE": mse,
+        "RMSE": float(np.sqrt(mse)),
         "MAPE": mape(y_true, y_pred),
         "SMAPE": smape(y_true, y_pred),
         "R2": float(r2_score(y_true, y_pred)),
@@ -362,7 +364,7 @@ def main() -> None:
     if len(results_df) == 0:
         raise ValueError("No detail rows found. Run train step first.")
 
-    summary = results_df[["MAE", "RMSE", "MAPE", "R2", "elapsed_s"]].agg(["mean", "std"]).T
+    summary = results_df[["MAE", "MSE", "RMSE", "MAPE", "R2", "elapsed_s"]].agg(["mean", "std"]).T
     summary.columns = ["mean", "std"]
 
     results_df.to_csv(detail_path, index=False)
@@ -372,6 +374,8 @@ def main() -> None:
                 "model": args.model,
                 "MAE_mean": round(summary.loc["MAE", "mean"], 4),
                 "MAE_std": round(summary.loc["MAE", "std"], 4),
+                "MSE_mean": round(summary.loc["MSE", "mean"], 4),
+                "MSE_std": round(summary.loc["MSE", "std"], 4),
                 "RMSE_mean": round(summary.loc["RMSE", "mean"], 4),
                 "RMSE_std": round(summary.loc["RMSE", "std"], 4),
                 "MAPE_mean": round(summary.loc["MAPE", "mean"], 2),

@@ -1,0 +1,2 @@
+model,panel_mode,group_id,trial_index,scoring,mean_test_score,std_test_score,fold_scores_json,params_json,elapsed_s,updated_at
+LightGBM,cluster,K0,0,r2,0.42075257308573005,0.18582423338152745,"[0.16246887505933294, 0.5918839096893393, 0.5079049345085178]","{""colsample_bytree"": 0.749816047538945, ""learning_rate"": 0.14285357442943783, ""max_depth"": 7, ""min_child_samples"": 81, ""n_estimators"": 900, ""num_leaves"": 40, ""reg_alpha"": 0.07800932022121826, ""reg_lambda"": 0.07799726016810132, ""subsample"": 0.6232334448672797}",84.4,2026-07-20T12:58:54

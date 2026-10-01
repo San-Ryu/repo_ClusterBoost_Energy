@@ -1,0 +1,2 @@
+dataset,family,model,MAE,MAPE,MSE,RMSE,MSLE,MBE,R2,elapsed_s,predictions_path
+ALL,ml,DecisionTree,190.4878172947414,0.07373873590086553,122830.29496581452,350.47153231869567,0.020226892257265684,23.097313509909245,-0.09348204972897722,0.053,results/legacy_aggregate_smoke/predictions/ml_decisiontree_ALL.csv

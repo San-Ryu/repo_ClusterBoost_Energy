@@ -1,0 +1,2 @@
+source_notebook,source_cell,experiment,model,resolution,cv_folds,target_context,MAE,MAPE,MSE,RMSE,MSLE,MBE,R2,elapsed_s
+/Users/labq_s.h.ryu/repo_A_machine_learning_ensemble_framework_based_on_a_clustering_algorithm_for_improving_electric_power_consumption_performance/Src_Energy_M02/M02-03_Model_ML-02_CV.ipynb,28,M02-03_Model_ML-02_CV,XGB,1H,10,legacy notebook selected aggregate target; see provenance,2.8019,0.0916,16.1143,3.7578,0.0131,0.2578,0.8386,0.2258
